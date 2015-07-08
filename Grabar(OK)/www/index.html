@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grabadora de sonido</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+
+<body>
+    <h1 class="align-center">Grabadora de sonido</h1>
+    <p class="align-center">
+        Se realizará una grabación de 10 segundos
+    </p>
+    <br>
+    <p class="align-center">
+        <input type="button" id="id_btnHello" value="Grabar">
+    </p>
+
+    <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
+
+
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
+
+    <script type="text/javascript">
+        // Record audio
+    document.getElementById("id_btnHello").addEventListener("click", recordAudio);
+
+    function recordAudio() {
+        alert("Grabando...");
+        var src = "grabacionJRR.amr";
+        var mediaRec = new Media(src,
+            // success callback
+            function() {
+              console.log("recordAudio():Audio Success");
+            },
+
+            // error callback
+            function(err) {
+                console.log("recordAudio():Audio Error: "+ err.code);
+            }
+        );
+
+    // Record audio
+        mediaRec.startRecord();
+
+    // Stop recording after 10 seconds
+        setTimeout(function() {
+          mediaRec.stopRecord();
+            alert("Fin de la grabación");
+        }, 10000); 
+    }
+    </script>
+</body>
+
+</html>

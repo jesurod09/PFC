@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="phoneGap.js"></script>
+    <!--<script src="flashlight.js"></script> -->
+        <script src="https://cdn.rawgit.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin/4c8bbd22d15b3866eb417d2ad0833abe89ff416a/www/Flashlight.js"></script>
+   <!-- <script src="js/plugins/Flashlight.js"></script> -->
+   <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <h1>Linterna</h1><br>
+
+    
+    <div class="app">
+        <button id="botonON" style='width:100%; height:50px'>Flash ON</button><br><br>
+        <button id="botonOFF" style='width:100%; height:50px'>Flash OFF</button><br><br>
+
+        <p class="align-center">
+        
+            <img src="images/linterna.png" />
+
+        </p>
+    </div>
+    <script type="text/javascript">
+        
+        document.getElementById("botonON").addEventListener("click", on);
+        document.getElementById("botonOFF").addEventListener("click", off);
+        
+        function on() {
+            window.plugins.flashlight.switchOn(); 
+
+        }
+        
+        function off(){
+            window.plugins.flashlight.switchOff();
+        }
+        
+        document.addEventListener("backbutton", function() {
+            // pass exitApp as callbacks to the switchOff method
+            window.plugins.flashlight.switchOff(exitApp, exitApp);
+        }, false);
+
+
+        function exitApp() {
+            navigator.app.exitApp();
+        }
+
+    </script>
+</body>
+</html>
+

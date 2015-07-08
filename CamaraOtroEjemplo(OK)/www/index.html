@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capturar Foto</title>
+    <meta charset = "utf-8"/>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        
+
+    var pictureSource;   // fuente de la foto
+    var destinationType; // establece el formato del valor devuelto
+
+    // Esperar a que Cordova conecte con el dispositivo
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // Cordova está listo para ser usado
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Se llama  cuando la foto se recupera con éxito
+    //
+    function onPhotoDataSuccess(imageData) {
+
+      // Obtener el manejador de la imagen
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Muestra la foto capturada
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Se llama  cuando la foto se recupera con éxito
+    //
+    function onPhotoURISuccess(imageURI) {
+
+      // Obtener el manejador de la imagen
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Muestra la foto capturada
+      //
+      largeImage.src = imageURI;
+    }
+
+    // Esta función es llamada por un botón
+    //
+    function capturePhoto() {
+      // Toma una foto usando la cámara del dispositivo y recupera la imagen como un base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // Esta función es llamada por un botón
+    //
+    function capturePhotoEdit() {
+      // Toma una foto con la cámara del dispositivo, permite editarla, and recupera la imagen como un base64-encoded string  
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // Esta función es llamada por un botón
+    //
+    function getPhoto(source) {
+      // Recuperar imagen ubicada en el archivo de origen especificado
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Esta f unción se llama cuando algo va mal
+    // 
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+    </script>
+  </head>
+  <body>
+    <button onclick="capturePhoto();">Captura Foto</button> <br>
+    <button onclick="capturePhotoEdit();">Captura Foto Editable</button> <br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Desde Librería de Fotos</button><br>
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Desde Álbum de Fotos</button><br>
+    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    <img style="display:none;" id="largeImage" src="" />
+  </body>
+</html>

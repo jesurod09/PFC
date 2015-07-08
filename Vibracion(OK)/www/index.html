@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Prueba vibración teléfono</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+
+</head>
+
+<body>
+<p>Prueba de vibración</p>
+
+<button id="botonA" style='width:100%; height:50px'>Vibración Larga</button><br><br>
+
+<button id="botonB" style='width:100%; height:50px'>Vibración Corta</button><br><br>
+<button id="botonC" style='width:100%; height:50px'>Patrón</button><br><br>
+<button id="botonD" style='width:100%; height:50px'>Start/Stop</button><br><br>
+
+    
+<br>
+<br>
+<br>
+<br>
+<button id="cancela">Detener vibración</button>
+
+<p id="demo"></p>
+<script>
+var vibrar = false;
+    
+document.getElementById("botonA").addEventListener("click", botonA);
+document.getElementById("botonB").addEventListener("click", botonB);
+document.getElementById("botonC").addEventListener("click", patron);
+document.getElementById("botonD").addEventListener("click", startStop);
+document.getElementById("cancela").addEventListener("click", detener);
+    
+
+
+
+function botonA() {
+    navigator.vibrate(3000);
+}
+
+function botonB() {
+    navigator.vibrate(1000); 
+}
+
+function patron() {
+    navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
+}
+
+function startStop(){
+
+    if (vibrar == false) {
+        vibrar = true;
+        navigator.vibrate(1000*3600*24);
+    } else {
+        detener();
+
+    }
+}
+    
+function detener() {
+    vibrar = false;
+    navigator.notification.cancelVibration();
+}
+</script>
+
+
+
+</body>
+</html>

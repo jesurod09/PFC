@@ -1,0 +1,10 @@
+Mi entrega:
+-----------
+
+https://quiz-2015-jesus.herokuapp.com/
+
+https://github.com/jesurod09/quiz
+
+Hay que esperar dos minutos para ver que la sesión expira
+
+Ejecutar con foreman start en local
