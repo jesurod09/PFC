@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba del sensor de proximidad</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+    
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <h1 class="align-center">Sensor de proximidad</h1>
+    <p class="align-center">
+        Este tipo de sensor se utiliza para evitar los eventos táctiles cuando el dispositivo está cerca de la cara
+    </p>
+
+
+    <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
+
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
+    <script src="http://debug-software.intel.com/target/target-script-min.js#yBwi7GPlRHTI0K6cQjNI_DdIWwJCC20nL_MzIhesbko"></script>
+    <script type="text/javascript">
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            console.log("El dispositivo está listo para ser usado");
+            
+            console.log("Se ha habilitado el sensor de proximidad");
+            console.log("Voy a lanzar función obtenerEstado");
+            //navigator.proximity.enableSensor();
+            obtenerEstado();
+        }
+        
+        function onSuccess(state) {
+            console.log("Entro en la función onSuccess");
+            alert('Proximity state: ' + (state ? 'near' : 'far'));
+        };
+
+        //navigator.proximity.enableSensor();
+
+        /*setInterval(function(){
+            navigator.proximity.getProximityState(onSuccess);
+            console.log("He obtenido el estado del sensor de proximidad");
+        }, 3000);*/
+        function obtenerEstado(){
+            alert("dispositivo preparado");
+            navigator.proximity.enableSensor();
+            //alert("El resultado de habilitar es " + navigator.proximity.enableSensor();
+            console.log("estoy dentro de obtenerEstado");
+            navigator.proximity.getProximityState(onSuccess);
+            console.log("He obtenido el estado del sensor de proximidad");    
+        }
+
+        
+    </script>
+   
+</body>
+</html>
+
+

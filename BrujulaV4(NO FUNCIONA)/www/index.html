@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brujula</title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        function onload() {
+            window.addEventListener("orientationchange", orientationChange, true);
+
+            function orientationChange(e) {
+
+                var currentOrientation = "";
+
+                if (window.orientation == 0) {
+                    currentOrientation = "portrait";
+                } else if (window.orientation == 90) {
+                    currentOrientation = "landscape";
+                } else if (window.orientation == -90) {
+                    currentOrientation = "landscape";
+                } else if (window.orientation == 180) {
+                    currentOrientation = "portrait";
+                }
+                document.getElementById("status").innerHTML = currentOrientation;
+
+            }
+        }
+    </script>
+
+</head>
+<body onload="onload()">
+
+    <h2>Orientation Test</h2>
+    <div id="status"></div>
+
+</body>
+</html>
