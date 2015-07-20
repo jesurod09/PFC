@@ -4,7 +4,8 @@ http://2noodles.com/miamiforum/viewtopic.php?f=12&t=58
 
 
 
-
+Observaciones:
+--------------
 No ha sido necesario el uso de plugins para su funcionamiento.
 
 Ha sido necesario hacer uso de jquery y jquery mobile para poder ponerla en funcionamiento y se ha empleado Ajax.
