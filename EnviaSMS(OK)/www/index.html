@@ -1,0 +1,55 @@
+<!--
+Ejemplo y plugin para envío de SMS extraído de:
+https://github.com/cordova-sms/cordova-sms-plugin
+-->
+
+<!DOCTYE html>
+<html>
+<head>
+	<title>App para enviar SMS</title>
+	<meta charset ="utf-8"/>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+
+</head>
+<body>
+	<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" /><br>
+	<textarea id="messageTxt" placeholder="Enter message"></textarea>
+	<input type="button" onclick="app.sendSms()" value="Send SMS" />
+	<script type="text/javascript">
+		var app = {
+    		sendSms: function() {
+    			alert("Hello world");
+        	var number = document.getElementById('numberTxt').value;
+        	var message = document.getElementById('messageTxt').value;
+        	alert(number);
+        	alert(message);
+
+        	//CONFIGURATION
+        	var options = {
+            	replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            	android: {
+                	//intent: 'INTENT'  // send SMS with the native android SMS messaging
+                	intent: '' // send SMS without open any other app
+            }
+        	}; 
+
+        	var success = function () { alert('Message sent successfully'); };
+        	var error = function (e) { alert('Message Failed:' + e); };
+        	sms.send(number, message, options, success, error);
+    	}
+	};
+
+	</script>
+</body>
+</html>
