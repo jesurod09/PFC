@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rellena tu eMail</title>
+
+	<meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script type="text/javascript">
+		document.addEventListener('deviceready', function () {
+   		 // cordova.plugins.email is now available
+		}, false);
+    </script>
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+</head>
+
+
+<body>
+	<div>
+		<b>Rellena tu Email</b>
+		<p>Esta aplicación rellenará un email automáticamente y cuando pulses enviar abrirá la aplicación nativa con el email relleno</p>
+
+	</div>
+	Destino: <input id="destino" placeholder="example@host.com" value=""/><br>
+	CC:      <input id="cc" placeholder="example@host.com" value=""/><br>
+	CCO:     <input id="cco" placeholder="example@host.com" value=""/><br>
+	Asunto   <input id="asunto" placeholder="Introduzca el asunto" value=""/><br>
+    Adjunto: <input id="adj" placeholder="Ruta del archivo adjunto" value=""/><br>
+	
+	<label>Mensaje: </label><textarea id="mensaje" placeholder="Introduzca aquí su mensaje"></textarea>
+	<input type="button" onclick="sendMail()" value="Send"/>
+
+	<script type="text/javascript">
+
+		function sendMail(){
+            alert("entro en sendMail()");
+			var destino = document.getElementById('destino').value;
+			var copia = document.getElementById('cc').value;
+			var copiaOculta = document.getElementById('cco').value;
+			var asunto = document.getElementById('asunto').value;
+			var cuerpo = document.getElementById('mensaje').value;
+            var adjunto = document.getElementById('adj').value;
+            
+            send_email.open_email_app( 
+                function(success) { 
+                    console.log(success); 
+                }, 
+                function(error) { 
+                    console.log(error); 
+                }, 
+                destino, copia, asunto, cuerpo , adjunto
+            );
+            
+			/*cordova.plugins.email.open({
+   				 to:      destino,
+    			 cc:      copia,
+    			 bcc:     [copiaOculta],
+    			 subject: asunto,
+    			 body:    cuerpo
+			});*/
+
+		}
+
+	</script>
+
+</body>
+</html>
