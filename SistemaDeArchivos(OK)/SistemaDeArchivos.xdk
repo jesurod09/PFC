@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww32/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "ea459771-a53f-4f47-86d7-5635b1459c2b",
-      "lastModifiedDate": 1441301330964,
+      "lastModifiedDate": 1441459290635,
       "creationDate": 1441297822256
     },
     "XDK-app-designer": "false",
@@ -85,8 +85,8 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "SistemaDeArchivos",
-        "appID_": "xdk.intel.blank.template",
+        "appName_": "SistemaDeArchivos1",
+        "appID_": "xdk.intel.sistema.de.archivos",
         "appAccess_": [
           {
             "origin": "*"
