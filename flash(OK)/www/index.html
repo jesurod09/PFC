@@ -6,10 +6,10 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="phoneGap.js"></script>
-    <!--<script src="flashlight.js"></script> -->
-        <script src="https://cdn.rawgit.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin/4c8bbd22d15b3866eb417d2ad0833abe89ff416a/www/Flashlight.js"></script>
-   <!-- <script src="js/plugins/Flashlight.js"></script> -->
+    <!--<script type="text/javascript" src="phoneGap.js"></script>-->
+
+    <!--<script src="https://cdn.rawgit.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin/4c8bbd22d15b3866eb417d2ad0833abe89ff416a/www/Flashlight.js"></script>-->
+
    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -27,31 +27,7 @@
 
         </p>
     </div>
-    <script type="text/javascript">
-        
-        document.getElementById("botonON").addEventListener("click", on);
-        document.getElementById("botonOFF").addEventListener("click", off);
-        
-        function on() {
-            window.plugins.flashlight.switchOn(); 
-
-        }
-        
-        function off(){
-            window.plugins.flashlight.switchOff();
-        }
-        
-        document.addEventListener("backbutton", function() {
-            // pass exitApp as callbacks to the switchOff method
-            window.plugins.flashlight.switchOff(exitApp, exitApp);
-        }, false);
-
-
-        function exitApp() {
-            navigator.app.exitApp();
-        }
-
-    </script>
+    <script type="text/javascript" src='js/index.js'></script>
 </body>
 </html>
 
