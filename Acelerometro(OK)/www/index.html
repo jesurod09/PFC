@@ -20,67 +20,11 @@
 
 <body>
     <h1 class="align-center">Acelerómetro</h1>
-    <div id="accelerometer">Waiting for accelerometer...</div>
+    <div id="accelerometer">Esperando al acelerómetro...</div>
     <button onclick="stopWatch();">Stop Watching</button>
 
-
-
-    <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
-
-    <script src="js/app.js"></script>           <!-- for your event code, see README and file comments for details -->
-    <script src="js/init-app.js"></script>      <!-- for your init code, see README and file comments for details -->
-    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
-    <script type="text/javascript" charset="utf-8">
-
-    // The watch id references the current `watchAcceleration`
-    var watchID = null;
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        startWatch();
-    }
-
-    // Start watching the acceleration
-    //
-    function startWatch() {
-
-        // Update acceleration every 3 seconds
-        var options = { frequency: 3000 };
-
-        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    }
-
-    // Stop watching the acceleration
-    //
-    function stopWatch() {
-        if (watchID) {
-            navigator.accelerometer.clearWatch(watchID);
-            watchID = null;
-        }
-    }
-
-    // onSuccess: Get a snapshot of the current acceleration
-    //
-    function onSuccess(acceleration) {
-        var element = document.getElementById('accelerometer');
-        element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
-                            'Acceleration Y: ' + acceleration.y         + '<br />' +
-                            'Acceleration Z: ' + acceleration.z         + '<br />' +
-                            'Timestamp: '      + acceleration.timestamp + '<br />';
-    }
-
-    // onError: Failed to get the acceleration
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    </script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
 </body>
 

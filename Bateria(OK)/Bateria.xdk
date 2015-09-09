@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "711b52cd-7c23-4ff9-91db-de545ca566a8",
-      "lastModifiedDate": 1435938582444,
+      "lastModifiedDate": 1441645044418,
       "creationDate": 1435938089183
     },
     "XDK-app-designer": "false",
@@ -45,7 +45,7 @@
         "dependedBy": [],
         "custom": "true",
         "name": "Bateria",
-        "origin": "https://github.com/apache/cordova-plugin-battery-status",
+        "origin": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git",
         "originType": "repo",
         "sourceLocation": ""
       }

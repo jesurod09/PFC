@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>navigator.connection.type Example</title>
+    <title>Aplicación que comprueba el estado de las conexiones</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
+        
     document.addEventListener("deviceready", onDeviceReady, false);
+    
+    //Se  dispara el evento onOffline cuando el dipositivo pierde la conexión a Internet
+    document.addEventListener("offline", onOffline, false);
+    //Se dispara el evento onOnline cuando el dispositivo se conecta a Internet
+    document.addEventListener("online", onOnline, false);
 
-    // device APIs are available
+    // Las APIs del dispositivo están listas para funcionar
     //
     function onDeviceReady() {
+        console.log("Dispositivo listo para funcionar"); 
         checkConnection();
         setInterval(function(){
             checkConnection();
-        }, 10000);
-        
+        }, 1000);
     }
 
         function checkConnection() {
@@ -33,12 +36,26 @@
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';
 
-            alert('Connection type: ' + states[networkState]);
+            //alert('Connection type: ' + states[networkState]);
+            document.getElementById('estado').innerHTML = states[networkState];
         }
+        
+        function onOnline() {
+            alert("Estas usando los datos del móvil. Esto puede suponer costes adicionales en tu factura");
+        }
+        
+        function onOffline() {
+            alert("Ops!Parece que has perdido tu conexión a Internet");
+        }
+        
+
 
     </script>
   </head>
   <body>
-    <p>A dialog box will report the network state.</p>
+    <h1>Conexión APP</h1>
+    <p>Bienvenido. Aquí podrás ver información acerca de la conexión de red de tu teléfono y WIFI del dispositivo, y si el dispositivo tiene conexión a Internet o no. <br>
+    </p>
+    <div id="estado">Comprobando...</div>
   </body>
 </html>

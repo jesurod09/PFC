@@ -13,3 +13,4 @@ Plugin utilizado:
 * Repositorio: https://github.com/cordova-sms/cordova-sms-plugin
 * Ejemplo: Descargado del mismo enlace
 * Particularidades: El plugin es válido para Android, iOS y Windows Phone 8. En el caso de iOS no es posible el envío de SMS sin utilizar la app nativa.
+* Pruebas: Probado en Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5 HD)
