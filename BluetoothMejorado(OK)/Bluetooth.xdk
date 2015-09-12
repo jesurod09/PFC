@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "da4c5f4e-c8d2-4b5c-bc7d-14d900acc4eb",
-      "lastModifiedDate": 1436637982874,
+      "lastModifiedDate": 1437848445089,
       "creationDate": 1436635276318
     },
     "XDK-app-designer": "false",
@@ -208,7 +208,7 @@
         "runtime_": "W3C on Firefox OS",
         "name_": "Firefox",
         "preferences_": {},
-        "isActive_": false,
+        "isActive_": true,
         "appName_": "Bluetooth",
         "appID_": "not.yet.specified",
         "appAccess_": [

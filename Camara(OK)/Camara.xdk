@@ -4,9 +4,9 @@
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
-      "projectGuid": "08b1870d-8ce0-4bf8-93d1-e6d7536c0498",
-      "lastModifiedDate": 1441990567649,
-      "creationDate": 1435683573994
+      "projectGuid": "f7060d5f-9fc4-4dd4-9cb5-f163d56878c3",
+      "lastModifiedDate": 1442069750319,
+      "creationDate": 1435848040078
     },
     "XDK-app-designer": "false",
     "sourceDirectory": "www",
@@ -27,8 +27,17 @@
         "dependedBy": []
       },
       {
-        "id": "org.apache.cordova.media",
-        "version": "0.2.15",
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.5",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.camera",
+        "version": "0.3.4",
         "selectedState": "Included",
         "data": {},
         "paramvals": {},
@@ -47,7 +56,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "xdk.intel.blank.template.crosswalk",
         "appAccess_": [
           {
@@ -76,7 +85,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -104,7 +113,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -131,7 +140,7 @@
           "windows-publisher-id": ""
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -155,7 +164,7 @@
         "name_": "WebApp",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -175,7 +184,7 @@
         "name_": "Chrome",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -195,7 +204,7 @@
         "name_": "Firefox",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -215,7 +224,7 @@
         "name_": "Facebook",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "Grabar",
+        "appName_": "Camara",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {

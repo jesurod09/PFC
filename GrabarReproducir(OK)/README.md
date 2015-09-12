@@ -1,85 +1,58 @@
-Blank Intel XDK and Apache Cordova Project
-==========================================
+Grabar App
+==========
 
-See [LICENSE.md](<LICENSE.md>) for license terms and conditions.
+Descripción:
+------------
+Esta sencilla aplicación graba un audio en formato .amr haciendo uso del micrófono del teléfono móvil. Para ello cuenta con un bótón que el usuario debe presionar si quiere comenzar la grabación. Una vez pulsado, aparece un mensaje de alerta, que avisa al usuario de que se iniciará la grabación una vez que pulse el botón aceptar. En ese momento se puede comenzar a hablar y al cabo de 10 segundos otro mensaje de alerta avisará de que la grabación ha concluído.
+La grabación se almacenará con el nombre grabacionJRR.amr en la raíz de la memoria del dispositivo.
 
-Project File Information
-------------------------
+Después esta grabación puede reproducirse si se desea haciendo click sobre el botón Play
 
-The `icon.png` and `screenshot.png` files are not required by your project. They
-are included for use by the Intel XDK template/demo panel and have no use within
-a real app. You can safely delete them from your project directory.
 
-The `cordova.js` script is needed to provide your app with access to Cordova
-APIs. To add Cordova APIs to your application you must add the corresponding
-Cordova plugins. See the *Plugins* section on the **Projects** tab.
+Objetivo:
+---------
+El objetivo de esta aplicación es el de obtener acceso al micrófono del terminal móvil y también al altavoz del mismo reproduciendo el sonido grabado.
 
-Project Details
----------------
+Plugin utilizado:
+-----------------
+Para el desarrollo de esta aplicación, se ha hecho uso del plugin "Media" incluído en Intel XDK en su versión 0.2.15. El plugin puede encontrarse también en la siguiente dirección web:
 
-Use this project as a starting point for an Intel XDK or Apache Cordova hybrid
-mobile app. One key file (`init-dev.js`) contains the initialization code needed
-to handle Intel XDK device ready, Cordova device ready or browser document ready
-init events in a way that allows you to run your app in any of these
-environments. This init code works:
+    - https://github.com/apache/cordova-plugin-media
+    
+El autor del plugin afirma que las plataformas donde se permite su uso son las siguientes:
+    * Android
+    * BlackBerry 10
+    * iOS
+    * Windows Phone 7 and 8
+    * Tizen
+    * Windows 8
+    * Windows
+    * Browser
 
--   with the the Intel XDK Emulate tab
+Se han utilizado dos métodos importantes, media.startRecord() y media.stopRecord().
 
--   in the Intel XDK App Preview application (Test tab)
-
--   in the App Preview Crosswalk container (Debug tab)
-
--   with the weinre debug script (Test tab)
-
--   in an app built using the Intel XDK legacy container (aka AppMobi container)
-
--   in an app built using the standard Apache Cordova container (aka Cordova
-    CLI)
-
-When `init-dev.js` completes execution it issues a custom "`app.Ready`" event.
-Use this event to start your application, rather than waiting on "device ready"
-or "document ready" or "window load" or similar events. You should not have to
-modify anything in `init-dev.js` to use this code. Also, `init-dev.js` has been
-written so that it is not dependent on any external libraries or specific
-webviews. It has been tested with the following webviews and browsers:
-
--   Android 2.3, 4.0-4.3, 4.4 and 5.x
-
--   iOS 6, 7 and 8
-
--   Windows 8 Phone
-
--   Windows 8
-
--   Crosswalk
-
--   Chrome Desktop Browser
-
--   Internet Explorer 10 and 11
-
-This blank project works well for converting an existing web app into a hybrid
-app. One of the biggest issues encountered when porting a web app to a hybrid
-app is resolving the init sequence of the web app with the init sequence
-required of a hybrid HTML5 app. This gets especially difficult when large
-third-party libraries are part of the app. Due to the additional burden of
-initializing the underlying native code layer, developers sometimes have trouble
-getting their code that runs in a desktop browser to initialize in an HTML5
-hybrid webview. Frequently this is due to the significant difference in
-resources between the desktop browser and the mobile webview (e.g., less memory,
-lower performance and a reduced feature set).
-
-There are many comments in the files in this project. Please read those comments
-for details and further documentation. In particular, see the comments in the
-`index.html` file for recommendations on how to load your third-party libraries
-relative to your application code and the special Cordova library.
-
-There are a large number of `console.log()` messages contained within
-`init-dev.js`. They can be used to debug initialization problems and understand
-how the file works. It is highly recommended that you leave those
-`console.log()` messages in that file, they will not unduly slow down or burden
-your application. Set `dev.LOG = true` to enable the `console.log()` messages in
-`init-dev.js` and set it to false for release code, it is normally set to false.
-
-BTW: the "`dev`” prefix refers to "device" in this context, not "develop,"
-because it grew out of a desire to build a more reliable and flexible "device
-ready" detector.
+* Método media.startRecord().
+.............................->
+    Este método se utiliza para comenzar a grabar un archivo de audio y está soportado en las plataformas:
+        * Android
+        * iOS
+        * Windows Phone 7 y 8
+        * Windows
+    En el caso de Android su uso implica que la extensión del archivo que se graba debe ser .amr
+    En el caso de iOS la extensión de los archivos debe ser .wav y la grabación se coloca en el directorio /tmp de la aplicación si no       se especifica lo contrario. Cualquier subdirectorio indicado durante el periodo de grabación debe ya existir previamente.
+    
+* Método media.stopRecord().
+............................->
+    Este método detiene la grabación del archivo de audio y está soportado en las plataformas:
+        * Android
+        * iOS
+        * Windows Phone 7 y 8
+        * Windows
+        
+* Método my_media.play()().
+...........................->
+    Este método reproduce la grabación que se le pasa como parámetro.
+        
+Pruebas realizadas:
+-------------------
+La aplicación, con el código que se adjunta, ha sido probada con éxito para Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5HD)

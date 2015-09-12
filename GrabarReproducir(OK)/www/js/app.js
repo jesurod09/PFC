@@ -1,8 +1,11 @@
  document.getElementById("id_btnHello").addEventListener("click", recordAudio);
  document.getElementById("id_btnPlay").addEventListener("click",  playAudio);
-   // document.getElementById("id_btnPause").addEventListener("click", pauseAudio);
-   // document.getElementById("id_btnStop").addEventListener("click",  stopAudio);
+ document.addEventListener("deviceready", onDeviceReady, false);
     
+
+    function onDeviceReady() {
+        console.log(Media);
+    }     
     
     function recordAudio() {
         alert("¿Quieres comenzar la grabación?");
@@ -19,10 +22,10 @@
             }
         );
 
-    // Record audio
+    // Grabar audio
         mediaRec.startRecord();
 
-    // Stop recording after 10 seconds
+    // Parar de grabar después de 10 segundos
         setTimeout(function() {
           mediaRec.stopRecord();
             alert("Fin de la grabación");
@@ -31,9 +34,9 @@
     
     function playAudio() {
 
-        // Play the audio file at url
+        // Reproducir el archivo de audio indicado en la url
         var url = "grabacionJRR.amr";
-            //alert("La URL vale " + url);
+
         var my_media = new Media(url,
             // success callback
             function () { console.log("playAudio():Audio Success"); },
@@ -44,15 +47,3 @@
         my_media.play();
     }
     
- /*   function pauseAudio() {
-
-        media.pause();
-        //alert("pausado");
-
-    }
-        
-    function stopAudio() {
-        //alert("parado");
-        media.stop();
-
-    }*/
