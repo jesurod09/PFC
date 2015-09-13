@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
         
     <title>Base de datos</title>
-    <script type="text/javascript" src="phonegap.js"></script>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -23,7 +22,7 @@
                  
             $.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );
                  
-            $('#output').html("Username: " + window.localStorage.getItem("username") + "<br>" + 
+            $('#output').html("Nombre de usuario: " + window.localStorage.getItem("username") + "<br>" + 
                                     "Email: " + window.localStorage["email"]
                                 );
                      
@@ -38,14 +37,14 @@
 <body>
     <div data-role="page" id="page1" >
             <div data-role="header" >
-                <h1>FORM</h1>
+                <h1>FORMULARIO</h1>
             </div>
             <div data-role="content"> 
                 <form method="POST" onSubmit="return submitForm()" data-ajax="false">
-                    <label class="ui-hidden-accessible">Username</label><input name="username" type="text" placeholder="Username">
+                    <label class="ui-hidden-accessible">Nombre de Usuario</label><input name="username" type="text" placeholder="Nombre de Usuario">
                     <input name="email" type="text" placeholder="Email">
             
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Enviar">
                 </form>
                                  
             </div>
@@ -54,14 +53,12 @@
          
     <div data-role="page" id="page2" data-add-back-btn="true">
          
-        <div data-role="header" >
-                
-            <h1>Page Two</h1>
+        <div data-role="header" >       
+            <h1>PÁGINA DOS</h1>
         </div>
+        
         <div data-role="content"> 
-            <div id="output">
-            </div>
-                     
+            <div id="output"></div>         
         </div>
              
     </div>

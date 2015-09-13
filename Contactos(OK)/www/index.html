@@ -18,9 +18,11 @@
 </head>
 <body>
 
-    <button onclick="add_contact();">Add New Contact</button>
-    <button onclick="select_a_contact();">Select a Contact</button>
-    <button onclick="import_contacts();">List all Contacts</button>
+    <button onclick="add_contact();" style='width:100%; height:50px'>Añadir nuevo contacto <img src="img/add_contact_120x120.png"></button><br><br>
+    
+    <button onclick="select_a_contact();" style='width:100%; height:50px'>Seleccionar un contacto <img src="img/_30-1324.png"></button><br><br>
+    
+    <button onclick="import_contacts();" style='width:100%; height:50px'>Listar todos los contactos <img src="img/agenda.png"></button><br><br>
     
     <ul id="contacts_list">
     
@@ -34,118 +36,6 @@
     <script src="js/init-app.js"></script>
     <script src="js/init-dev.js"></script>
     
-    <script>
-        window.addEventListener('load', function() {
-            new FastClick(document.body);
-        }, false);
-        
-        function add_contact()
-        {
-            intel.xdk.contacts.addContact();
-        }
-        
-        document.addEventListener('intel.xdk.contacts.add', function(evt){
-            if(evt.success == true)
-            {
-                import_contacts();
-                alert("Contact "+evt.contactid+" successfully added");
-            }
-            else
-            {
-                alert("Add Contact Cancelled");
-            }
-        });
-        
-        function select_a_contact()
-        {
-            intel.xdk.contacts.chooseContact();
-        }
-        
-        document.addEventListener('intel.xdk.contacts.choose', function(evt){
-            if (evt.success == true)
-            {
-                var contactID = evt.contactid;
-                
-                //this function retirves infotmation of a contact based on its id.
-                var contactInfo = intel.xdk.contacts.getContactData(contactID);
-                
-                var firstName = contactInfo.first;
-                var lastName = contactInfo.last;
-                var phoneNumbers = contactInfo.phones;
-                var emails = contactInfo.emails;
-                var address = contactInfo.addresses;
-                
-                alert(firstName + lastName);
-            }
-            else if (evt.cancelled == true)
-            {
-                alert("Choose Contact Cancelled");
-            }
-        });
-        
-        
-        
-        function import_contacts()
-        {
-            intel.xdk.contacts.getContacts();
-        }
-        
-        document.addEventListener('intel.xdk.contacts.get', display_contacts, false);
-                                  
-        function display_contacts(evt)
-        {
-            var myContacts = intel.xdk.contacts.getContactList();
-            
-            document.getElementById("contacts_list").innerHTML = "";
-            
-            for(var i=0; i < myContacts.length; i++) 
-           {
-               var contactID = myContacts[i];
-               
-               var contactInfo = intel.xdk.contacts.getContactData(contactID);
-               var firstName = contactInfo.first;
-               var lastName = contactInfo.last;
-               
-               var html = "<li>Name: " + firstName + " " + lastName + " <br> <button onclick='remove_contact(" + contactID + ")'>Remove</button><button onclick='edit_contact(" + contactID + ")'>Edit</button></li>";
-                document.getElementById("contacts_list").innerHTML = document.getElementById("contacts_list").innerHTML + html;
-            }
-        }
-        
-        function remove_contact(contactID)
-        {
-            intel.xdk.contacts.removeContact(contactID);
-
-        }
-        
-        document.addEventListener('intel.xdk.contacts.remove', function(evt){
-            if (evt.success == true)
-            {   
-                import_contacts();
-                alert("Contact has been removed");
-            }
-            else
-            {
-                alert("Contact couldn't be deleted");
-            }
-        });  
-        
-        function edit_contact(contactID)
-        {
-            intel.xdk.contacts.editContact(contactID);
-        }
-        
-        document.addEventListener('intel.xdk.contacts.edit', function(evt){
-            if (evt.success == true)
-            {
-                import_contacts();
-                alert("Contact has been edited");
-            }
-            else if (evt.cancelled == true)
-            {
-                alert("Edit Contact Cancelled");
-            }
-        });
-        
-    </script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

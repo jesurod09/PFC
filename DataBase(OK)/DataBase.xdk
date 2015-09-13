@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "9aafa35d-49f8-4fbd-b89e-65400eaa0a8b",
-      "lastModifiedDate": 1437308951471,
+      "lastModifiedDate": 1442160392240,
       "creationDate": 1437308951381
     },
     "XDK-app-designer": "false",
@@ -16,26 +16,7 @@
     "libraries": [],
     "serviceMethods": [],
     "cordovaPluginsDirectory": "plugins",
-    "cordovaPlugins": [
-      {
-        "id": "org.apache.cordova.device",
-        "version": "0.2.13",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      },
-      {
-        "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.5",
-        "selectedState": "Included",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      }
-    ],
+    "cordovaPlugins": [],
     "buildConfigurations": {
       "Android-Crosswalk": {
         "platform_": "android",
