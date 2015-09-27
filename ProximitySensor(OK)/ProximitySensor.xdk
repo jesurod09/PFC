@@ -3,10 +3,10 @@
     "projectSettingsVersion": "1.2",
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
-      "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
-      "projectGuid": "ae8170b2-0594-4cdd-a006-f31b826b8a17",
-      "lastModifiedDate": 1436198067884,
-      "creationDate": 1436010074295
+      "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww32/jsapp/templates-blank-cordova-project/sample.zip",
+      "projectGuid": "1499d8cd-c893-4385-b9dc-69fefa6bb96e",
+      "lastModifiedDate": 1443368953307,
+      "creationDate": 1443368613179
     },
     "XDK-app-designer": "false",
     "sourceDirectory": "www",
@@ -18,6 +18,24 @@
     "cordovaPluginsDirectory": "plugins",
     "cordovaPlugins": [
       {
+        "id": "org.apache.cordova.device",
+        "version": "0.2.13",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.3.5",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "dependsOn": [],
+        "dependedBy": []
+      },
+      {
         "id": "org.awokenwell.proximity",
         "version": "",
         "selectedState": "Included",
@@ -26,7 +44,7 @@
         "dependsOn": [],
         "dependedBy": [],
         "custom": "true",
-        "name": "PluginSensorProximidad",
+        "name": "Proximity",
         "origin": "https://github.com/awoken-well/cordova-plugin-proximity.git",
         "originType": "repo",
         "sourceLocation": ""
@@ -43,7 +61,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "xdk.intel.blank.template.crosswalk",
         "appAccess_": [
           {
@@ -67,12 +85,12 @@
         "runtime_": "Cordova 3.x",
         "name_": "Android",
         "preferences_": {
-          "android-minSdkVersion": "10",
+          "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -100,7 +118,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -127,7 +145,7 @@
           "windows-publisher-id": ""
         },
         "isActive_": true,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": [
           {
@@ -151,7 +169,7 @@
         "name_": "WebApp",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -171,7 +189,7 @@
         "name_": "Chrome",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -191,7 +209,7 @@
         "name_": "Firefox",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -211,7 +229,7 @@
         "name_": "Facebook",
         "preferences_": {},
         "isActive_": false,
-        "appName_": "SensorProximidad",
+        "appName_": "ProximitySensor",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
