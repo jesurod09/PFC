@@ -7,8 +7,13 @@ document.getElementById("botonC").addEventListener("click", botonC);
     
 // Cuando el dispositivo esté listo , devuelve el SSID de la red a la que está conectado
 function onDeviceReady() {
-    miConexionWifi();
+    //miConexionWifi();
+    console.log("La API está lista para ser utilizada");
 }
+
+setInterval(function(){
+    miConexionWifi();
+}, 100);
 
 //Comprueba a qué red WIFI me encuentro conectado
 function miConexionWifi(){
@@ -20,8 +25,8 @@ function miConexionWifi(){
     }
     
     function wifiApagado(){
-        alert("El WiFi se encuentra apagado o no hay ninguna red configurada.");
-        document.getElementById("miConexion").innerHTML = "WIFI APAGADO o NO HAY RED CONFIGUURADA";
+        //alert("El WiFi se encuentra apagado o no hay ninguna red configurada.");
+        document.getElementById("miConexion").innerHTML = "WIFI APAGADO o NO HAY RED CONFIGURADA";
     }
         
 //El cobjetivo de esta función  y las siguientes es comprobar el estado del wifi y activarlo o desactivarlo
@@ -43,7 +48,7 @@ function botonA() {
         //Función auxiliar que después de comprobar si el wifi está ON/OFF establece la red a la que está conectado
         function exito(){
             alert("Orden ejecutada");
-            miConexionWifi();
+            //miConexionWifi();
         }
     //Manejador que se ejecuta en caso de error al ejecutar la función isWifiEnabled
     function errorAlComprobar(){
@@ -78,7 +83,13 @@ function botonC() {
         var i;
             
         for (i=0; i<list.length; i++) {
-                document.getElementById('listaEscaneada').innerHTML += "<li>" + list[i].SSID + "</li>";
+             document.getElementById('tabla').innerHTML += "<tr>" + 
+                "<td>" +  list[i].SSID + "</td>" +
+                "<td>" +  list[i].BSSID + "</td>" +
+                "<td>" +  list[i].level + "</td>" +
+                "<td>" +  list[i].frequency + "</td>" +
+                "<td>" +  list[i].capabilities + "</td>" + 
+                "</tr>";
         }   
     }
         
@@ -86,4 +97,21 @@ function botonC() {
 //Función auxiliar de error
 function error(){
     alert("No se puede ejecutar la orden");
+}
+
+//Función para conectarse a una red WIFI
+function conecta(){
+    //alert("hola");
+    var ssid;
+    var password;
+    var algorithm = 'WPA';
+    var wifi;
+    ssid = document.getElementById("ssid").value;
+    password = document.getElementById("pass").value;
+    //alert("El ssid es: " + ssid + " y la password es " + password);
+    //alert(WifiWizard.formatWifiConfig(ssid, password, algorithm));
+    //wifi = WifiWizard.formatWifiConfig(ssid, password, algorithm);
+    wifi = WifiWizard.formatWPAConfig(ssid, password);
+    WifiWizard.addNetwork(wifi, function(){console.log("Añadida con éxito a la lista");}, function(){alert("Error");});
+    WifiWizard.connectNetwork(ssid, function(){alert("Conectado con éxito");}, function(){alert("Error");});
 }

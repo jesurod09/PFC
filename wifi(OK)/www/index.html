@@ -16,21 +16,28 @@
 
 <body>
     <h1 class="align-center"><b>WiFi APP</b></h1>
-    <p class="align-center">
+    <p>
         <b>El dispositivo está conectado a: </b><div id='miConexion'></div>
     </p>
-    <br>
+
     <p class="align-center">
         <button id="botonA" style='width:100%; height:50px'>WiFi ON/OFF</button><br><br>
         
-        <button id="botonB" style='width:100%; height:50px'>Listar las redes configuradas</button><br><br>
+        <button id="botonB" style='width:100%; height:50px'>Listar las redes configuradas</button><br>
         <div id="lista"><b>Lista de las redes configuradas: <br></b></div><br><br>
     
         <button id="botonC" style='width:100%; height:50px'>Escanea redes disponibles</button><br><br>
-        <div id="listaEscaneada"><b>Lista de las redes escaneadas: <br></b></div><br><br>
-
+        <div id="listaEscaneada"><b><h3>Lista de las redes escaneadas:</h3></b></div><br><br>
+        <table id="tabla">
+            <tr>
+                <td><b>SSID</b></td><td><b>MAC</b></td><td><b>Potencia</b></td><td><b>Frecuencia</b></td><td><b>Seguridad</b></td>
+            </tr>
+        </table>
     </p>
-
+    <h3>Conectar a una red:</h3>
+    <label>SSID: </label><input type="text" id="ssid" placeholder="Nombre identificador" value="">
+    <label>Contraseña: </label><input type="text" id="pass" placeholder="Introduzca contraseña" value=""><br>
+    <input type="button" onclick="conecta()" value="Conectar" />
 
 
     <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
