@@ -51,5 +51,5 @@ Compatibilidad:
 Pruebas:
 --------
 Se han probado las tres funciones en Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5HD).
-Se ha observado en este caso que sólo se ejecuta la función batterystatus, independientemente de cual sea el nivel de la batería. Despues de leer la documentación del plugin no se encuentra una razón aparente para que estas dos funciones no corran en un dispositivo Android.
-Por otro lado existn peculiaridades que deberán ser tomadas en cuenta para otros Sistemas oPERATIVOS
+
+Por otro lado existn peculiaridades que deberán ser tomadas en cuenta para otros Sistemas Operativos.

@@ -3,11 +3,11 @@ Camara App
 
 Descripción de la aplicación:
 -----------------------------
-La aplicación incorpora un botón denominado "Tomar foto", que abre la cámara del dispositivo móvil, con la que tomaremos una foto en modo editable, es decir accederemos a esta funcionalidad de la cámara en la cual las fotos se pueden editar. Cuando la guardemos, la foto se presentará en la aplicación.
+La aplicación incorpora un botón denominado "Tomar foto", que abre la cámara del dispositivo móvil, con la que tomaremos una foto . Cuando la guardemos, la foto se presentará en la aplicación.
 
 Objetivo:
 ---------
-El objetivo de esta aplicacion es la captura de imágenes haciendo uso de la cámara que incorporan  los dispositivos móviles actuales. Se pretende demostrar que es posible acceder a este hardware y su software asociado mediante el uso de Intel XDK y el uso del plugin cordova adecuado.
+El objetivo de esta aplicacion es la captura de imágenes haciendo uso de la cámara que incorporan  los dispositivos móviles actuales. Se pretende demostrar que es posible acceder a este hardware  mediante el uso de Intel XDK y el uso del plugin cordova adecuado.
 
 Plugin utilizado:
 -----------------

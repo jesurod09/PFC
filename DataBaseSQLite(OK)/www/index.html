@@ -25,7 +25,7 @@
          
             function createDB(tx) {
                 //tx.executeSql('DROP TABLE IF EXISTS DEMO');
-                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (title, image, description)');
+                tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (title, description)');
              
             }
          
@@ -39,15 +39,15 @@
          
             function insertDB(tx) {
                 var _title = $("[name='title']").val();
-                var _image = $("[name='image']").val();
                 var _description = $("[name='description']").val();
-                var sql = 'INSERT INTO DEMO (title, image, description) VALUES (?,?,?)';
-                tx.executeSql(sql, [_title,_image,_description], sucessQueryDB, errorCB);
+                var sql = 'INSERT INTO DEMO (title, description) VALUES (?,?)';
+                tx.executeSql(sql, [_title,_description], sucessQueryDB, errorCB);
  
             }
-         
+
             function sucessQueryDB(tx) {     
                 tx.executeSql('SELECT * FROM DEMO', [], renderList, errorCB);
+
             }
          
             function renderList(tx,results) {
@@ -62,14 +62,10 @@
                  
                 $('#resultList').html(htmlstring);
                 $('#resultList').listview('refresh');
-                 
-                 
             }
  
             function submitForm() {
                 db.transaction(insertDB, errorCB);
-                
-                //$.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );
                 $.mobile.changePage( "#page2", { reverse: false, transition: "slide" } );
                 return false;
             }
@@ -80,7 +76,6 @@
           
     </head>
     <body>
- 
          
         <div data-role="page" id="page1" >
             <div data-role="header" >
@@ -90,7 +85,6 @@
                  
                 <form method="post" onsubmit="return submitForm()" data-ajax="false" >
                     <label for="title" class="ui-hidden-accessible">Title</label><input type="text" name="title" placeholder="Title"><br>
-                    <label for="image" class="ui-hidden-accessible">Image</label><input type="text" name="image" placeholder="image URI"><br>
                     <input type="text" name="description" placeholder="description">
                                  
                     <input type="submit" value="ENVIAR">
@@ -104,7 +98,7 @@
          
             <div data-role="header" >
                 
-                <h1>Page Two</h1>
+                <h1>Lista de datos</h1>
             </div>
             <div data-role="content"> 
                 <div id="output">
