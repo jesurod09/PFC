@@ -3,11 +3,11 @@
     "projectSettingsVersion": "1.2",
     "creationData": {
       "type": "Import",
-      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
-      "projectGuid": "1d5edbdd-c1b6-4360-90ce-99557c7be3e1",
-      "lastModifiedDate": 1435856224905,
-      "creationDate": 1435856224850
+      "projectGuid": "c7b1ff2e-2c28-472f-959c-98a4fa3a23b4",
+      "lastModifiedDate": 1434389049930,
+      "creationDate": 1434389049857
     },
     "sourceDirectory": "",
     "cordovaPluginsDirectory": "plugins",
@@ -18,31 +18,12 @@
     "projectFiles": {},
     "projectDirectories": {},
     "libraries": [],
-    "cordovaPlugins": [
-      {
-        "id": "org.apache.cordova.device",
-        "version": "0.2.13",
-        "selectedState": "Auto",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      },
-      {
-        "id": "org.apache.cordova.splashscreen",
-        "version": "0.3.5",
-        "selectedState": "Auto",
-        "data": {},
-        "paramvals": {},
-        "dependsOn": [],
-        "dependedBy": []
-      }
-    ],
+    "cordovaPlugins": [],
     "serviceMethods": [],
     "buildConfigurations": {
       "Android": {
         "platform_": "android",
-        "runtime_": "Cordova 3.x",
+        "runtime_": "W3C on Cordova",
         "name_": "Android",
         "preferences_": {
           "android-minSdkVersion": "10",
@@ -50,7 +31,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "InformacionBateria",
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -68,7 +49,7 @@
       },
       "Android-Crosswalk": {
         "platform_": "android",
-        "runtime_": "Crosswalk with Cordova 3.x",
+        "runtime_": "W3C on Crosswalk",
         "name_": "Android-Crosswalk",
         "preferences_": {
           "android-minSdkVersion": "14",
@@ -76,7 +57,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "InformacionBateria",
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -94,14 +75,14 @@
       },
       "iOS": {
         "platform_": "ios",
-        "runtime_": "Cordova 3.x",
+        "runtime_": "W3C on Cordova",
         "name_": "iOS",
         "preferences_": {
           "ios-target": "6",
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "InformacionBateria",
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -118,11 +99,11 @@
       },
       "Windows8": {
         "platform_": "windows8",
-        "runtime_": "Cordova 3.x",
+        "runtime_": "W3C on Cordova",
         "name_": "Windows8",
         "preferences_": {},
         "isActive_": true,
-        "appName_": "InformacionBateria",
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -141,8 +122,8 @@
         "runtime_": "W3C",
         "name_": "WebApp",
         "preferences_": {},
-        "isActive_": false,
-        "appName_": "InformacionBateria",
+        "isActive_": true,
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -160,8 +141,8 @@
         "runtime_": "W3C on Firefox OS",
         "name_": "Firefox",
         "preferences_": {},
-        "isActive_": false,
-        "appName_": "InformacionBateria",
+        "isActive_": true,
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -179,8 +160,8 @@
         "runtime_": "W3C on Chrome OS",
         "name_": "Chrome",
         "preferences_": {},
-        "isActive_": false,
-        "appName_": "InformacionBateria",
+        "isActive_": true,
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {
@@ -198,8 +179,8 @@
         "runtime_": "W3C on Facebook",
         "name_": "Facebook",
         "preferences_": {},
-        "isActive_": false,
-        "appName_": "InformacionBateria",
+        "isActive_": true,
+        "appName_": "Ahorcado",
         "appID_": "not.yet.specified",
         "appAccess_": [
           {

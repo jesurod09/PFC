@@ -1,11 +1,11 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "2.0.0",
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "6982791c-df5f-4095-af98-d3e3bf877554",
-      "lastModifiedDate": 1436024299769,
+      "lastModifiedDate": 1444323890075,
       "creationDate": 1436024070322
     },
     "XDK-app-designer": "false",
@@ -24,7 +24,15 @@
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.device",
+        "permissions": {},
+        "topLevel": true,
+        "checksum": "87180a02",
+        "gitref": "",
+        "name": "Device",
+        "description": "Cordova Device Plugin"
       },
       {
         "id": "org.apache.cordova.splashscreen",
@@ -33,7 +41,15 @@
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.splashscreen",
+        "permissions": {},
+        "topLevel": true,
+        "checksum": "ae76b446",
+        "gitref": "",
+        "name": "Splashscreen",
+        "description": "Cordova Splashscreen Plugin"
       },
       {
         "id": "intel.xdk.device",
@@ -41,7 +57,25 @@
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "repo",
+        "origin": "https://github.com/01org/cordova-plugin-intel-xdk-device.git",
+        "gitref": "r1.1.12",
+        "subdir": ".",
+        "permissions": {
+          "android:name": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.CAMERA",
+            "android.permission.FLASHLIGHT"
+          ]
+        },
+        "topLevel": true,
+        "checksum": "1a0d6390",
+        "version": "1.1.12",
+        "name": "Intel XDK Device",
+        "description": "Intel XDK Device Plugin"
       }
     ],
     "buildConfigurations": {
@@ -55,13 +89,16 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "EscanerQR",
+        "appName_": "EscanerCodigos",
         "appID_": "xdk.intel.blank.template.crosswalk",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -86,11 +123,14 @@
         "isActive_": true,
         "appName_": "EscanerQR",
         "appID_": "xdk.intel.blank.template",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -114,11 +154,14 @@
         "isActive_": true,
         "appName_": "EscanerQR",
         "appID_": "xdk.intel.blank.template",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -141,11 +184,14 @@
         "isActive_": true,
         "appName_": "EscanerQR",
         "appID_": "xdk.intel.blank.template",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -165,11 +211,14 @@
         "isActive_": false,
         "appName_": "EscanerQR",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -185,11 +234,14 @@
         "isActive_": false,
         "appName_": "EscanerQR",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -205,11 +257,14 @@
         "isActive_": false,
         "appName_": "EscanerQR",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -225,21 +280,46 @@
         "isActive_": false,
         "appName_": "EscanerQR",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "appAuthor_": "Intel XDK",
         "appVersion_": "0.0.1"
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "EscanerQR",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "5.1.1"
       }
     },
     "gameAssetDirectory": "asset",
     "gameMetadata": {},
-    "projectTags": []
+    "projectTags": [],
+    "testDirectory": "test"
   }
 }
