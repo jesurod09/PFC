@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capturar Foto</title>
+    <meta charset = "utf-8"/>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <style>
+        body {
+            background-color: #4B0082;
+        }
+        button {
+            background-color: #DAA520;
+            font-size:100%;
+        }
+        
+        h2 {
+            color: white
+        }
+        
+        label {
+            color: white
+        }
+    
+    </style>
+      
+      <script src="http://debug-software.intel.com/target/target-script-min.js#N5lVdmJ6bWcxsg6SRtDhwhV4E8Eclkw6Jgndxa38aow"></script>
+      
+      
+      
+  </head>
+    
+  <body>
+    <h2>Captura Foto: Modo auto</h2>
+    <button onclick="capturePhoto();" style='width:100%; height:50px'>
+        Captura Foto
+    </button> <br><br>
+      
+    <h2>Captura Foto: Modo Seleccionar parámetros</h2>
+    <label style='width:50%'>Calidad(0-100):</label>
+    <br><input type="text" id="calidad" placeholder = "Introduzca valor entre 0 y 100" style='width:50%'><br>
+        
+    <label style='width:50%'>JPEG(0) ó PNG(1)  </label>
+    <br><input type="text" id="codificacion" placeholder = "PNG" style='width:50%'><br>
+      
+    <label style='width:50%'>Ancho(px)</label>
+    <br><input type="text" id="ancho" placeholder = "Introduzca cantidad en píxels. Ej.: 100" style='width:50%'><br>
+      
+    <label style='width:50%'>Alto(px)</label>
+    <br><input type="text" id="alto" placeholder = "Introduzca cantidad en píxels. Ej.: 100" style='width:50%'><br>
+
+    <label style='width:50%'>Cámara Trasera(BACK(0)) o frontal(FRONT(1))</label>
+    <br><input type="text" id="camara" placeholder = "BACK" style='width:50%'><br><br>
+      
+      
+    <button onclick="capturePhotoEdit();" style='width:100%; height:50px'>
+        Captura Foto Editable
+    </button> <br><br>
+      
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);" style='width:100%; height:50px'>
+        Desde Librería de Fotos
+    </button><br><br>
+      
+    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" style='width:100%; height:50px'>
+        Desde Álbum de Fotos
+    </button><br><br>
+      
+      
+    <img style="display:none;" id="smallImage" src="" />
+    <img style="display:none;" id="largeImage" src="" />
+  </body>
+</html>
