@@ -9,7 +9,14 @@
     
     function recordAudio() {
         alert("¿Quieres comenzar la grabación?");
-        var src = "grabacionJRR.amr";
+        //var src = "grabacionJRR.amr";
+        var src;
+        console.log(device.platform);
+        if(device.platform == "Android"){
+            src = "grabacionJRR.amr";
+        }else if(device.platform == "iOS"){
+            src = "grabacionJRR.wav";
+        }
         var mediaRec = new Media(src,
             // success callback
             function() {
@@ -35,7 +42,13 @@
     function playAudio() {
 
         // Reproducir el archivo de audio indicado en la url
-        var url = "grabacionJRR.amr";
+        //var url = "grabacionJRR.amr";
+        var url;
+        if(device.platform == "Android"){
+            url = "grabacionJRR.amr";
+        }else if(device.platform == "iOS"){
+            url = "grabacionJRR.wav";
+        }
 
         var my_media = new Media(url,
             // success callback
