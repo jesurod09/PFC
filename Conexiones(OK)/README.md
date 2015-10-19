@@ -43,4 +43,8 @@ En el caso de iOS y Windows Phone no se puede obtener la información sobre el t
 
 Pruebas:
 -------
-La aplicación se ha probado con éxito en Android 4.4.2 (Modelo de dispositivo bq Aquaris 5HD).
+* La aplicación se ha probado inicialmente sobre el emulador de Intel XDK. Aunque se detectan los cambios en el tipo de red que se está simulando, no refresca en pantalla de qué tipo de red se trata.
+
+* La aplicación se ha probado con éxito en Android 4.4.2 tanto sobre App Preview como instalándola como aplicación nativa para los dispositivos bq Aquaris 5HD y LG L50 Sporty.
+
+* La aplicación también se ha probado sobre iOS 9 en un iPhone 4s mediante App Preview. Al contrario de lo que afirmaba el autor del plugin en la documentación del mismo, el teléfono sí que ha sido capaz de determinar a qué tipo de red está conectado.

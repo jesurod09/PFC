@@ -1,5 +1,5 @@
-Aplicación EnviaEmail
-=====================
+EnviaEmail APP
+==============
 
 Descripción:
 ------------
@@ -25,14 +25,28 @@ Plugins utilizados:
   Este Plugin goza de una gran popularidad ya que su autor afirma que es válido para las plataformas:
  	- ios,  android,  amazon-fireos,  wp8,  windows
 
-  Se probó empaquetando la Aplicación para el SO Android, pero la construcción producía un error no esperado debido al uso de este plugin. Dada su gran versatilidad no se descarta su uso para probar la aplicación con otros SOs. El código correspondiente al uso implícito de este plugin, se encuentra comentado en el archivo index.html dentro de la función SendMail.
+  Se probó empaquetando la Aplicación para el SO Android, pero la construcción producía un error no esperado debido provocado por la incorporación de este plugin, por ese motivo se descartó. El código correspondiente al uso implícito de este plugin, se encuentra comentado en el archivo index.html dentro de la función SendMail (cordova.plugins.email.open).
 
- * El plugin correspondiente al código subido se encuentra aquí:
+* Acto seguido se probó el uso del siguiente plugin:
  	- https://github.com/jaypratapsingh/send_email
 
-   Se ha elegido este plugin de entre  una multitud de ellos dada su facilidad de uso. Lamentablemente este plugin sólo puede utilizarse con el SO Android.
+   Se eligió este plugin de entre  una multitud de ellos dada su facilidad de uso. Lamentablemente este plugin sólo puede utilizarse con el SO Android por lo que finalmente también se descartó.
+   
+* Finalmente con el objetivo de garantizar que la aplicación fuera válida en iOS y Android se optó por el plugin "Intel XDK Device" incluído en Intel XDK, entre los plugins propios de Intel XDK. Este plugin lamentablemente a diferencia del anterior no permite el envío de archivos adjuntos.
 
+Pruebas:
+--------
+* La aplicación se ha probado con éxito sobre el emulador de Intel XDK, que abre  la aplicación nativa de correo del equipo con los campos rellenos.
 
+* La aplicación se ha probado con éxito sobre App Preview en Android 4.4.2 para los terminales: 
+	- BQ Aquaris 5 HD
+	- LG L50 Sporty
+
+* La aplicación se ha probado en iOS 9 sobre App Preview para un  iPhone 4s. En este caso la aplicación no funciona. Es difícil saber si instalándola como aplicación nativa sí que funcionaría.
+
+* La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en Android 4.4.2 para los terminales: 
+	- BQ Aquaris 5 HD
+	- LG L50 Sporty
 
 
 

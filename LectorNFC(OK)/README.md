@@ -3,7 +3,7 @@ Lector NFC App
 
 Descripción:
 ------------
-La aplicación es un escaner de NFC. Cuando se acerque al teléfono un dispositivo con NFC (pej una tarjeta de crédito) el dispositivo leerá la información grabada en la etiqueta NFC y la mostrará por pantalla. El ejemplo se ha extrído del siguiente blog:
+La aplicación es un escaner de NFC. Cuando se acerque al teléfono un dispositivo con NFC (p.ej: una tarjeta de crédito) el dispositivo leerá la información grabada en la etiqueta NFC y la mostrará por pantalla. El ejemplo se ha extrído del siguiente blog:
     - http://chariotsolutions.com/blog/post/read-and-write-nfc-tags-with-phonegap-2/
 
 Y el código fuente se ha encontrado en github, se ha utilizado en concreto la carpeta www, y se puede encontrar en este repositorio:

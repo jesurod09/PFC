@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>Aplicación que comprueba el estado de las conexiones</title>
-
+    <meta charset="utf-8">
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="http://debug-software.intel.com/target/target-script-min.js#ksATyjt0Gic5rah8X_cCFXkVGdNjh6ZitSV_cTeotXw"></script>
     <script type="text/javascript" charset="utf-8">
+    
         
     document.addEventListener("deviceready", onDeviceReady, false);
     
@@ -12,18 +14,22 @@
     document.addEventListener("offline", onOffline, false);
     //Se dispara el evento onOnline cuando el dispositivo se conecta a Internet
     document.addEventListener("online", onOnline, false);
+    
+    var aux = 0; //variable auxiliar para que no salte continuamente el mensaje de la conexion 3g y 4g
 
     // Las APIs del dispositivo están listas para funcionar
     //
     function onDeviceReady() {
         console.log("Dispositivo listo para funcionar"); 
-        checkConnection();
+        //checkConnection();
+    }
         setInterval(function(){
             checkConnection();
+            console.log("Función setInterval(): El valor de aux = " + aux );
         }, 1000);
-    }
-
+        
         function checkConnection() {
+            
             var networkState = navigator.connection.type;
 
             var states = {};
@@ -38,14 +44,27 @@
 
             //alert('Connection type: ' + states[networkState]);
             document.getElementById('estado').innerHTML = states[networkState];
+            if(aux == 0){
+                if(states[networkState] == 'Cell 3G connection' || states[networkState] == 'Cell 4G connection'){
+                    aux = 1;
+                    console.log("La conexión es por datos y aux=" + aux);
+                    alert("Cuidado estás conectado a la red móvil. Esto podría suponerte un coste.");
+                } else {
+                    
+                    aux = 0;
+                    console.log("La conexión es por wifi y aux=" + aux);
+                }
+            }
+            
         }
         
         function onOnline() {
-            alert("Estas usando los datos del móvil. Esto puede suponer costes adicionales en tu factura");
+            alert("Estas conectado a Internet");
         }
         
         function onOffline() {
             alert("Ops!Parece que has perdido tu conexión a Internet");
+            aux = 0;
         }
         
 

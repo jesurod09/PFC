@@ -28,5 +28,18 @@ El plugin es válido en las siguientes plataformas:
     
 Pruebas realizadas:
 -------------------
-* La aplicación ha sido probada con éxito como aplicación nativa en un dispositivo real Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5 HD).
-* También se ha probado con éxito en  un dispositivo real Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5 HD)  utilizando la aplicación App Preview.
+* La ejecución de la aplicación ha sido exitosa en el emulador de Intel XDK.
+
+* La aplicación ha sido probada con éxito como aplicación nativa en los dispositivos reales Android 4.4.2 , modelos de dispositivo:
+    - BQ Aquaris 5 HD.
+    - LG L50 Sporty
+    
+* También se ha probado con éxito en  los dispositivos reales con Android 4.4.2 anteriores y en uno con iOS 9(iPhone 4s) utilizando la aplicación App Preview para los modelos:
+    - BQ Aquaris 5 HD. ->Tarda en encontrar la posición.
+    - LG L50 Sporty
+    - iPhone 4s
+    
+
+#Precauciones:
+En el caso de Android hay que activar el modo de alta precisión (enableHighAccuracy) para que la aplicación devueleva la posición del usuario.
+

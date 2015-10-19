@@ -1,85 +1,48 @@
-Blank Intel XDK and Apache Cordova Project
-==========================================
+CamaraSoftware APP
+==================
 
-See [LICENSE.md](<LICENSE.md>) for license terms and conditions.
 
-Project File Information
-------------------------
+Descripción de la aplicación:
+-----------------------------
+La aplicación incorpora 4 botones:
+	 - "Captura Foto" -> Toma una foto normalmente
+	 - "Captura Foto Editable" ->Toma una foto y permite configurar algunas de sus características rellenando el formulario asociado.
+	 - "Desde Libreria de Fotos" ->Toma una foto desde la librería de fotos
+	 - "Desde Álbum de Fotos" -> Toma una foto desde el álbum de fotos
+Debajo de los cuatro botones hay dos etiquetas <image>. La etiqueta superior coloca la imagen tomada desde los dos primeros botones mientras que las segunda coloca la imagen tmada por c ualquiera de las otras dos opciones.
 
-The `icon.png` and `screenshot.png` files are not required by your project. They
-are included for use by the Intel XDK template/demo panel and have no use within
-a real app. You can safely delete them from your project directory.
+Objetivo:
+---------
+El objetivo es demostrar que es posible configurar determinados aspectos multimedia. En este caso se ha seleccionado la cámara y la captura de imágenes.
 
-The `cordova.js` script is needed to provide your app with access to Cordova
-APIs. To add Cordova APIs to your application you must add the corresponding
-Cordova plugins. See the *Plugins* section on the **Projects** tab.
+Plugin utilizado:
+-----------------
+El plugin que se ha utilizado es el plugin "Camera" incluído en Intel XDK en su versión 1.2.0. Este plugin también podría haberse incluído en la aplicación como si de un plugin de terceros se tratase extrayendo la información (ID y repositorio) de esta URL:
+    https://github.com/apache/cordova-plugin-camera
 
-Project Details
----------------
+Este plugin provee una API para tomar fotos  y configurarlas.
+Para poder utilizar este plugin es importante comprobar que el dispositivo está listo para usarse usando la función onDeviceReady.
 
-Use this project as a starting point for an Intel XDK or Apache Cordova hybrid
-mobile app. One key file (`init-dev.js`) contains the initialization code needed
-to handle Intel XDK device ready, Cordova device ready or browser document ready
-init events in a way that allows you to run your app in any of these
-environments. This init code works:
+  
+Pruebas realizadas:
+-------------------
+* La aplicación se ha probado sobre el emulador de Intel XDK, pero en éste la funcionalidad es limitada ya que se simula la captura de una imagen tomando la foto de un archivo incluido en el equipo de trabajo para cualquiera de las cuatro opciones.
 
--   with the the Intel XDK Emulate tab
+* La aplicación se ha probado con éxito en App Preview sobre Android 4.4.2 para los terminales:
+  - BQ Aquaris 5HD.
+  - LG L50 Sporty.
+ Se produce error al configurar la imagen con codificación PNG
 
--   in the Intel XDK App Preview application (Test tab)
+* La aplicación se ha probado con éxito sobre App Preview para iOS 9 utilizando un dispositivo iPhone 4s.
 
--   in the App Preview Crosswalk container (Debug tab)
+* La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en  Android 4.4.2 sobre los terminales:
+  - BQ Aquaris 5HD.
+  - LG L50 Sporty.
+ Se produce error al configurar la imagen con codificación PNG
+ 
 
--   with the weinre debug script (Test tab)
+Nota importante:
+----------------
+* Las dos opciones "Desde Libreria de Fotos" y "Desde Álbum de Fotos" tienen comportamientos diferentes en iOS, pero en Android las fotos se toman desde la Galería de Fotos.
 
--   in an app built using the Intel XDK legacy container (aka AppMobi container)
-
--   in an app built using the standard Apache Cordova container (aka Cordova
-    CLI)
-
-When `init-dev.js` completes execution it issues a custom "`app.Ready`" event.
-Use this event to start your application, rather than waiting on "device ready"
-or "document ready" or "window load" or similar events. You should not have to
-modify anything in `init-dev.js` to use this code. Also, `init-dev.js` has been
-written so that it is not dependent on any external libraries or specific
-webviews. It has been tested with the following webviews and browsers:
-
--   Android 2.3, 4.0-4.3, 4.4 and 5.x
-
--   iOS 6, 7 and 8
-
--   Windows 8 Phone
-
--   Windows 8
-
--   Crosswalk
-
--   Chrome Desktop Browser
-
--   Internet Explorer 10 and 11
-
-This blank project works well for converting an existing web app into a hybrid
-app. One of the biggest issues encountered when porting a web app to a hybrid
-app is resolving the init sequence of the web app with the init sequence
-required of a hybrid HTML5 app. This gets especially difficult when large
-third-party libraries are part of the app. Due to the additional burden of
-initializing the underlying native code layer, developers sometimes have trouble
-getting their code that runs in a desktop browser to initialize in an HTML5
-hybrid webview. Frequently this is due to the significant difference in
-resources between the desktop browser and the mobile webview (e.g., less memory,
-lower performance and a reduced feature set).
-
-There are many comments in the files in this project. Please read those comments
-for details and further documentation. In particular, see the comments in the
-`index.html` file for recommendations on how to load your third-party libraries
-relative to your application code and the special Cordova library.
-
-There are a large number of `console.log()` messages contained within
-`init-dev.js`. They can be used to debug initialization problems and understand
-how the file works. It is highly recommended that you leave those
-`console.log()` messages in that file, they will not unduly slow down or burden
-your application. Set `dev.LOG = true` to enable the `console.log()` messages in
-`init-dev.js` and set it to false for release code, it is normally set to false.
-
-BTW: the "`dev`” prefix refers to "device" in this context, not "develop,"
-because it grew out of a desire to build a more reliable and flexible "device
-ready" detector.
+* El plugin utilizado, únicamente permite utlizar la cámara trasera en Android independientemente de la opción seleccionada.

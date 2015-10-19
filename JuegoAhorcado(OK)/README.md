@@ -7,7 +7,7 @@ Esta aplicación implementa el conocido juego del ahorcado. El jugador tendrá q
 
 Objetivo:
 ---------
-El objetivo de esta aplicación es comprobar el renderizado de una aplicación que utiliza un canvas para pintar.
+El objetivo de esta aplicación es comprobar el renderizado de una aplicación que utiliza un canvas para pintar sobre la Web View de diferentes terminales.
 
 Plugins utilizados:
 -------------------
@@ -16,7 +16,8 @@ Ninguno
 Pruebas realizadas:
 -------------------
 La aplicación se ha probado con éxito en las siguientes plataformas:
-- Emulador intel XDK
-- App Preview
+* Emulador intel XDK.
 
-También se ha  probado instalando la aplicación como una aplicación nativa en un dispositivo con Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5 HD). La aplicación se carga con éxito la primera vez, pero cuando se inicia una nueva partida se pierde el fondo amarillo del canvas, lo que demuestra que no funcniona demasiado bien el renderizado del canvas en algunos dispositivos Android.
+* App Preview: Probado en  Android 4.4.2 en los modelos de dispositivo BQ Aquaris 5 HD, LG L50 Sporty y iPhone 4s. En el caso de los dos terminales Android el canvas no termina de renderizar correctamente cargándose el fondo del mismo de color negro cuando debería hacerlo de color amarillo. Para el iPhone sin embargo el funcionamiento observado es el correcto.
+
+* Igualmente se ha probado sobre dispositivos Android 4.4.2 instalándola como aplicación nativa en los modelos LG L50 Sporty y en un BQ Aquaris 5 HD. En ambos casos la aplicación renderiza bien cuando se carga inicialmente. Sin embargo cuando se recarga la partida al terminar, el BQ Aquaris 5HD renderiza el canvas con el fondo en color negro cuando debería hacerlo en color amarillo, algo que no ocurre con el otro terminal. 

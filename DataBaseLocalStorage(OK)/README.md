@@ -1,6 +1,5 @@
-DataBase APP
-============
-
+DataBaseLocalStorage APP
+========================
 
 Descripción:
 ------------
@@ -16,5 +15,12 @@ No ha sido necesario hacer uso de ningún plugin para esta aplicación.
 
 Pruebas realizadas:
 -------------------
-La aplicación se ha probado EN UN DISPOSITIVO REAL en Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5 HD).
-Debido a que no incorpora ningún plugin también se ha podido probar con éxito en el emulador de Intel XDK para un Nexus 4, un iPhone6 y un Nokia Lumia 920.
+* La aplicación se ha probado inicialmente sobre el emulador de Intel XDK, donde se ha observado un funcionamiento correcto.
+* Se han realizado pruebas satisfactorias sobre App Preview en dispositivos reales con Android 4.4.2 para los modelos: 
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty
+* Se ha realizado una prueba satisfactoria sobre App Preview en iOS 9 para el modelo de dispositivo:
+    - iPhone 4s
+* La aplicación se ha probado en dispositivos reales sobre Android 4.4.2 instalándola como aplicación nativa para los modelos:
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty

@@ -23,4 +23,6 @@ Según el autor el plugin y por tanto la aplicación son compatibles con los sig
 
 Pruebas realizadas:
 -------------------
-La aplicación se ha probado con éxito en Android 4.4.2 (modelo del teléfono BQ Aquaris 5 HD)
+La aplicación se ha probado con éxito en Android 4.4.2, modelos de teléfono:
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty

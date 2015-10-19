@@ -41,7 +41,14 @@ La información relativa a cómo debe utilizarse puede encontrarse en la siguien
     
 Pruebas realizadas:
 ------------------
-La aplicación se ha probado con éxito en un dispositivo real Android 4.4.2 (Modelo de Dispositivo BQ Aquaris 5 HD). Sin embargo se ha observado que en este dispositivo las funciones chooseContact() y getContacts() tienen una ejecución muy lentas, posiblemente debido a la elevada cantidad de contactos que existen en el dispositivo.
-La aplicación también se ha probado con éxito en el emulador de Intel XDK para un dispositivo Nexus 4, iPhone 6 y Nokia Lumia 920, siendo mucho más fluída la ejecución para el emulador.
+* La aplicación se ha probado con éxito en el emulador de Intel XDK.
+
+* La aplicacion se ha probado sobre App Preview en dispositivos con Android 4.4.2, en los modelos BQ Aquaris 5 HD y LG L50 Sporty. En ambos funciona bien la opción que permite añadir un nuevo contacto pero las otras dos opciones presentan un comportamiento herrático.
+
+* La aplicación se ha probado sobre App Preview para iOS 9, pero no ha funcionado.
+
+* La aplicación se ha probado con relativo éxito como aplicación nativa en  dispositivos reales con Android 4.4.2 (Modelos de Dispositivo BQ Aquaris 5 HD y LG L50 Sporty). Sin embargo se ha observado que en el BQ Aquaris 5 HD las funciones chooseContact() y getContacts() tienen una ejecución muy lentas, posiblemente debido a la elevada cantidad de contactos que existen en el dispositivo. Finalmente la aplicación no es capaz de editar o eliminar contactos en dispositivos Android.
+
+
 
 

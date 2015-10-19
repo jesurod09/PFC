@@ -26,4 +26,15 @@ Plataformas en las que debería funcionar la aplicación:
  
 Plataformas en las que se ha probado:
 -------------------------------------
-- Android 4.4.2 (BQ Aquaris 5 HD) --------> Probado con éxito
+* La aplicación se ha probado sobre el emulador de Intel XDK. Sin embargo en este emulador no es posible leer el archivo creado ni se listan los archivos que hay en el directorio.
+
+* La aplicación se ha probado con éxito en App Preview para Android 4.4.2 en los modelos de dispositivo:
+	- BQ Aquaris 5 HD.
+	- LG L50 Sporty
+
+* La aplicación se ha probado con éxito en App Preview para iOS 9, en un terminal:
+	- iPhone 4s.
+
+* La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en Android 4.4.2 para los dispositivos:
+	- BQ Aquaris 5 HD.
+	- LG L50 Sporty.

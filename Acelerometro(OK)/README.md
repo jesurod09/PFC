@@ -8,12 +8,11 @@ Adicionalmente cuenta con un botón que detiene la captura de datos del aceleró
 
 Objetivo:
 ---------
-
 El objetivo de esta aplicación es obtener acceso al sensor denominado acelerómetro que incluyen la mayoría de los dispositivos móviles actuales.
 
 Plugin utilizado:
 -----------------
-Se ha utilizado el plugin 'Accelerometer' incluído en Intel XDK. Su información y documentación pueden encontrarse en esta web de d onde también se ha obtenido el ejemplo para la aplicación:
+Se ha utilizado el plugin 'Accelerometer' incluído en Intel XDK. Su información y documentación pueden encontrarse en esta web de donde también se ha obtenido el ejemplo para la aplicación:
 - https://github.com/apache/cordova-plugin-device-motion
 
 Compatibilidad:
@@ -34,4 +33,14 @@ Por tanto la aplicación desarrollada debería funcionar en todos ellos. Según 
 
 Pruebas:
 --------
-La aplicación ha sido probada con éxito en Android 4.4.2 (modelo de dispositivo BQ Aquaris 5HD)
+* La aplicación se ha probado sobre el emulador de Intel XDK con éxito.
+
+* La aplicación ha sido probada con éxito en Android 4.4.2 icon App Preview sobre los modelos de dispositivo:
+	- BQ Aquaris 5HD -> Se ha observado que al detenerse en una posición fija el timestamp se detiene.
+	- LG L50 Sporty
+	
+* La aplicación se ha probado con éxito sobre App Preview en iOS 9,  utilizando un terminal modelo iPhone 4s. No ha sido necesario realizar modificaciones de la aplicación.
+
+* La aplicación ha sido probada con éxito en Android 4.4.2 instalada como aplicación nativa sobre los modelos de dispositivo:
+	- BQ Aquaris 5HD -> Se ha observado que al detenerse en una posición fija el timestamp se detiene.
+	- LG L50 Sporty

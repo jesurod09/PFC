@@ -22,7 +22,7 @@ Intel XDK contiene una casilla en Included Plugins que permite añadir este plug
 Dispositivos compatibles:
 -------------------------
 Según el autor del plugin éste es compatible para su uso con las siguientes plataformas:
-* firefoxos
+* firefox OS
 * wp7
 * wp8
 * android
@@ -32,8 +32,17 @@ Según el autor del plugin éste es compatible para su uso con las siguientes pl
 * blackberry10  
 * tizen
 
-El plugin tiene ciertas peculiaridades dependiendo del sistema operativo al ue esté destinado la aplicación. El actual código es válido para Android pero puede que sea necesario adaptarlo a las peculiaridades si se prueba en otro sistema operativo.
+El plugin tiene ciertas peculiaridades dependiendo del sistema operativo al que esté destinado la aplicación. En iOS no es posible fijar el tiempo de vibración del dispositivo ni establecer un patrón de vibración.
 
 Pruebas:
 --------
-El código de esta aplicación se ha probado con éxito en Android 4.4.2 (Modelo del terminal BQ Aquaris 5 HD)
+* La aplicación se ha probado sobre el emulador de Intel XDK. En este emulador pueden apreciarse correctamente la vibración corta y la vibración larga pero no se aprecia correctamente el patrón de vibración y la opción "Star/Stop" bloquea intel XDK.
+
+* El código de esta aplicación se ha probado con éxito sobre App Preview en Android 4.4.2 e iOS 9. Modelos de terminal: 
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty
+    - iPhone 4s -> No se pueden aplicar patrones de vibración ni establecer el tiempo de vibración
+
+* La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en Android 4.4.2 sobre los terminales:
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty

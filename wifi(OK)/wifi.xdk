@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "d4c608ce-1c9a-44d8-9528-4f87c5daf575",
-      "lastModifiedDate": 1443962501394,
+      "lastModifiedDate": 1445098866721,
       "creationDate": 1436199694447
     },
     "XDK-app-designer": "false",
@@ -86,7 +86,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Orientation": "landscape"
         },
         "isActive_": true,
         "appName_": "wifi",

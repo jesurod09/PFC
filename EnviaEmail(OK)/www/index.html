@@ -32,7 +32,7 @@
 	Asunto   <input id="asunto" placeholder="Introduzca el asunto" value=""/><br>
     Adjunto: <input id="adj" placeholder="Ruta del archivo adjunto" value=""/><br>
 	
-	<label>Mensaje: </label><textarea id="mensaje" placeholder="Introduzca aquí su mensaje"></textarea>
+	<label>Mensaje: </label><textarea id="mensaje" placeholder="Introduzca aquí su mensaje"></textarea><br><br>
 	<input type="button" onclick="sendMail()" value="Send"/>
 
 	<script type="text/javascript">
@@ -44,9 +44,11 @@
 			var copiaOculta = document.getElementById('cco').value;
 			var asunto = document.getElementById('asunto').value;
 			var cuerpo = document.getElementById('mensaje').value;
-            var adjunto = document.getElementById('adj').value;
+            //var adjunto = document.getElementById('adj').value;
+            intel.xdk.device.sendEmail(cuerpo, destino, asunto, false,
+    copia, copiaOculta);
             
-            send_email.open_email_app( 
+            /* send_email.open_email_app( 
                 function(success) { 
                     console.log(success); 
                 }, 
@@ -54,7 +56,7 @@
                     console.log(error); 
                 }, 
                 destino, copia, asunto, cuerpo , adjunto
-            );
+            ); */
             
 			/*cordova.plugins.email.open({
    				 to:      destino,

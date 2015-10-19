@@ -16,3 +16,9 @@ El plugin que se ha utilizado se puede encontrar en la siguiente URL:
 Este plugin es compatible en iOS y Android.
 
 La aplicación podría no funcionar bien en iOS ya que una particularidad de este plugin en  iOS es que este sistema operativo atenúa la pantalla y desactiva los eventos táctiles cuando el sensor de proximidad está en el estado "cerca". Es posible evitar esto con el uso de otras APIs pero la aplicación será rechazada en la App Store.
+
+Pruebas realizadas:
+-------------------
+La aplicación se ha probado con éxito en Android 4.4.2 para los modelos:
+    - BQ Aquaris 5 HD 
+    - LG L50 Sporty

@@ -18,6 +18,7 @@
 
     </style>
     <script src="http://debug-software.intel.com/target/target-script-min.js#zklVnpZnx6Qnczp7Tx0AHI-H-uVHrO778WgvESnDHrA"></script>
+    
     <!-- Loaad the API Google Maps-->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     
@@ -32,58 +33,9 @@
     </p>
     <br>
 
-
-
     <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
 
-    <script src="js/app.js"></script>           <!-- for your event code, see README and file comments for details -->
-    <script src="js/init-app.js"></script>      <!-- for your init code, see README and file comments for details -->
-    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
-
-    <script type="text/javascript">
-
-        initialize(40.35, 3.67);
-        document.addEventListener("deviceready", onDeviceReady, false);
-            function onDeviceReady() {
-                
-                navigator.geolocation.getCurrentPosition(onSuccess, onError);
-                
-        }
-        
-
-        var onSuccess = function(position) {
-            console.log("Latitud es :" + position.coords.latitude);
-            console.log("Longitud es :" + position.coords.longitude);
-            initialize(position.coords.latitude , position.coords.longitude);
-        /*alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n');*/
-        };
-
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-        }
-        
-        function initialize(lat, long) {
-            var mapCanvas = document.getElementById('map-canvas');
-            var mapOptions = {
-                center: new google.maps.LatLng(lat, long),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-        }
-        
-
-    </script>
+    <script type="text/javascript" src="js/index.js"></script>
     
 </body>
 

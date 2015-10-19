@@ -50,6 +50,14 @@ Compatibilidad:
     
 Pruebas:
 --------
-Se han probado las tres funciones en Android 4.4.2 (Modelo de dispositivo BQ Aquaris 5HD).
+* Se ha probado con éxito la aplicación sobre el emulador de Intel XDK, donde además es muy sencillo simular los distintos niveles de batería.
 
-Por otro lado existn peculiaridades que deberán ser tomadas en cuenta para otros Sistemas Operativos.
+* La aplicación se ha probado con App Preview en Android 4.4.2 para los terminales:
+    - BQ Aquaris 5HD
+    - LG L50 Sporty
+
+* Se ha probado la aplicación sobre App Preview en iOS 9 sobre un terminal iPhone 4s. A pesar de incluir un plugin que es posible probar con App Preview, la aplicación no devuelve información sobre el estado de la batería. No se ha encontrado motivo aparente ya que no existen restricciones en iOS que apliquen al plugin con el que se ha desarrollado la aplicación.
+
+* La aplicación se ha probado en Android 4.4.2 empaquetada e instalada como aplicación nativa para los terminales:
+    - BQ Aquaris 5HD
+    - LG L50 Sporty

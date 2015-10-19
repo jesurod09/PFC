@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
       "projectGuid": "c7b1ff2e-2c28-472f-959c-98a4fa3a23b4",
-      "lastModifiedDate": 1444151561771,
+      "lastModifiedDate": 1445169914490,
       "creationDate": 1434389049857
     },
     "sourceDirectory": "",
@@ -36,7 +36,8 @@
         "preferences_": {
           "android-minSdkVersion": "10",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "Ahorcado",
@@ -65,7 +66,8 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Fullscreen": true
         },
         "isActive_": true,
         "appName_": "Ahorcado",
@@ -84,7 +86,7 @@
         "excludedLibraries_": "",
         "appVersion_": "0.0.1",
         "appVersionCode_": "1",
-        "crosswalkVersion_": "11",
+        "crosswalkVersion_": "14",
         "cordovaCLIVersion_": "4.1.2"
       },
       "iOS": {
@@ -248,5 +250,8 @@
       }
     },
     "testDirectory": "test"
+  },
+  "editorTab": {
+    "showLiveDevelopmentTasksPanel": true
   }
 }

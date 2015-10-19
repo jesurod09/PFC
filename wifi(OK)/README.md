@@ -3,13 +3,13 @@ WIFI APP
 
 Descripción:
 ------------
-La aplicación accede a algunas de las funcionalidades del WIFI del teléfono. En primer lugar, es capaz de mostrar en caso de que el WIFI se encuentre conectado cuál es la red WIFI que se está utilizando. Esta funcionalidad falla en el caso de que  el WIFI esté apagado y luego se encienda.
+La aplicación accede a algunas de las funcionalidades del WIFI del teléfono. En primer lugar, es capaz de mostrar en caso de que el WIFI se encuentre conectado cuál es la red WIFI que se está utilizando. 
 Debajo de la red a la que se encuentra conectado, puede encontrarse un botón que permite activar o desactivar el WIFI en el teléfono.
-Después hay un botón que permite mostrar todas las redes que están ya configuradas en el teléfono y por último aparece un botón que permite escanear y mostrar una lista de las redes escaneadas.
+Después hay un botón que permite mostrar todas las redes que están ya configuradas en el teléfono y por último aparece un botón que permite escanear y mostrar una lista de las redes escaneadas, junto con información sobre ellas(dirección MAC, FRECUENCIA, Potencia y tipo de seguridad). De entre esta lista de redes escaneadas, es posible conectarse a una de ellas si tiene seguridad WPA, introduciento su SSID y la clave de la red.
 
 Objetivo:
 ---------
-El objetivo que persigue esta aplicación es el de trabajar con el wifi del dispositivo. No se han implementado todas las funcionalidades que ofrece el plugin pero si que se ha conseguido acceder con éxito al WIFI.
+El objetivo que persigue esta aplicación es el de trabajar con el wifi del dispositivo. N
 
 Plugin:
 -------
@@ -20,4 +20,6 @@ La documentación con respecto a este plugin es algo escasa y se desconocen los 
 
 Pruebas:
 --------
-Las pruebas para esta aplicación se han realizado con éxito en un teléfono Android 4.4.2 (Modelo BQ Aquaris 5 HD)
+Las pruebas para esta aplicación se han realizado con éxito en un teléfono Android 4.4.2 modelos: 
+    - BQ Aquaris 5 HD
+    - LG L50 Sporty

@@ -19,5 +19,15 @@ Se ha utilizado el plugin Compass incluído en Intel XDK
 
 Pruebas:
 --------
-Probado con éxito en dispositivo:
+* Probado con éxito sobre el emulador de Intel XDK.
+
+* Probado con éxito sobre App Preview en Android 4.4.2 en dispositivo:
     - LG L50 Sporty (Android 4.4.2)
+
+* Probado con éxito en iOS 9 sobre el terminal.
+	- iPhone 4s
+
+* Probado con éxito en Android 4.4.2 empaquetando e instalando la aplicación como aplicación nativa en un terminal:
+	- LG L50 Sporty (Android 4.4.2)
+
+

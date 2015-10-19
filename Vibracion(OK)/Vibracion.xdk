@@ -1,10 +1,10 @@
 {
   "project": {
-    "projectSettingsVersion": "1.2",
+    "projectSettingsVersion": "2.0.0",
     "creationData": {
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "projectGuid": "0ff532df-3b6f-4de5-8c2e-1e033584a054",
-      "lastModifiedDate": 1435593141048,
+      "lastModifiedDate": 1445094808518,
       "creationDate": 1435589273654
     },
     "XDK-app-designer": "false",
@@ -23,7 +23,15 @@
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.device",
+        "permissions": {},
+        "name": "Device",
+        "topLevel": true,
+        "checksum": "87180a02",
+        "gitref": "",
+        "description": "Cordova Device Plugin"
       },
       {
         "id": "org.apache.cordova.splashscreen",
@@ -32,21 +40,37 @@
         "data": {},
         "paramvals": {},
         "dependsOn": [],
-        "dependedBy": []
+        "dependedBy": [],
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.splashscreen",
+        "permissions": {},
+        "name": "Splashscreen",
+        "topLevel": true,
+        "checksum": "ae76b446",
+        "gitref": "",
+        "description": "Cordova Splashscreen Plugin"
       },
       {
         "id": "org.apache.cordova.vibration",
-        "version": "",
-        "selectedState": "Included",
-        "data": {},
+        "name": "Vibration",
+        "version": "0.3.12",
+        "originType": "cordova.io",
+        "origin": "org.apache.cordova.vibration",
+        "gitref": "",
         "paramvals": {},
+        "sourceLocation": "plugins/org.apache.cordova.vibration",
+        "selectedState": "Included",
+        "checksum": "b2dce79c",
         "dependsOn": [],
-        "dependedBy": [],
-        "custom": "true",
-        "name": "Vibración",
-        "origin": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git",
-        "originType": "repo",
-        "sourceLocation": ""
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.VIBRATE"
+          ]
+        },
+        "description": "Cordova Vibration Plugin",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "buildConfigurations": {
@@ -62,11 +86,14 @@
         "isActive_": true,
         "appName_": "Vibracion",
         "appID_": "xdk.intel.cordova.template.lite",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -91,11 +118,14 @@
         "isActive_": true,
         "appName_": "Vibracion",
         "appID_": "xdk.intel.cordova.template.lite",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -119,11 +149,14 @@
         "isActive_": true,
         "appName_": "Vibracion",
         "appID_": "xdk.intel.cordova.template.lite",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -146,11 +179,14 @@
         "isActive_": true,
         "appName_": "Vibracion",
         "appID_": "xdk.intel.cordova.template.lite",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -170,11 +206,14 @@
         "isActive_": false,
         "appName_": "Vibracion",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -191,11 +230,14 @@
         "isActive_": false,
         "appName_": "Vibracion",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -212,11 +254,14 @@
         "isActive_": false,
         "appName_": "Vibracion",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -233,11 +278,14 @@
         "isActive_": false,
         "appName_": "Vibracion",
         "appID_": "not.yet.specified",
-        "appAccess_": [
-          {
-            "origin": "*"
-          }
-        ],
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
@@ -245,10 +293,35 @@
         "appAuthor_": "Intel XDK",
         "appVersion_": "0.0.1",
         "appDescription_": "Universal init code for Intel XDK and Cordova device ready detection, as well as within browser."
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "Vibracion",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "5.1.1"
       }
     },
     "gameAssetDirectory": "asset",
     "gameMetadata": {},
-    "projectTags": []
+    "projectTags": [],
+    "testDirectory": "test"
+  },
+  "editorTab": {
+    "showLiveDevelopmentTasksPanel": true
   }
 }
