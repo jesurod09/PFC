@@ -4,18 +4,19 @@ EnviaEmail APP
 Descripción:
 ------------
 La aplicación consta de seis cajetines correspondientes a los campos principales con los que se suele rellenar  un correo electrónico. Estos campos son:
-	- Destino
-	- CC
-	- CCO
-	- Asunto
-	- Adjunto
-	- Mensaje
 
-Una vez el que el usuario termina de rellenar los campos, debe hacer click sobre el botón enviar momento en el que se abrirá la aplicación nativa de envío de correo electrónico.
+* Destino
+* CC
+* CCO
+* Asunto
+* Adjunto
+* Mensaje
+
+Una vez el que el usuario termina de rellenar los campos, debe hacer click sobre el botón "enviar" momento en el que se abrirá la aplicación nativa de envío de correo electrónico.
 
 Objetivo:
 ---------
-El objetivo que se persigue con el desarrollo de esta aplicación, es demostrar que se puede acceder a la aplicación nativa de encío de correo electrónico del SO y se pueden autocompletar los campos del email con la información recibida desde nuestra App.
+El objetivo que se persigue con el desarrollo de esta aplicación, es demostrar que se puede acceder a la aplicación nativa de envío de correo electrónico del SO y se pueden autocompletar los campos del email con la información recibida desde nuestra App.
 
 Plugins utilizados:
 -------------------
@@ -32,7 +33,7 @@ Plugins utilizados:
 
    Se eligió este plugin de entre  una multitud de ellos dada su facilidad de uso. Lamentablemente este plugin sólo puede utilizarse con el SO Android por lo que finalmente también se descartó.
    
-* Finalmente con el objetivo de garantizar que la aplicación fuera válida en iOS y Android se optó por el plugin "Intel XDK Device" incluído en Intel XDK, entre los plugins propios de Intel XDK. Este plugin lamentablemente a diferencia del anterior no permite el envío de archivos adjuntos.
+* Finalmente con el objetivo de garantizar que la aplicación fuera válida en iOS y Android se optó por el plugin "Intel XDK Device" (Intel XDK Device 1.1.12) incluído en Intel XDK, entre los plugins propios de Intel XDK. Este plugin lamentablemente a diferencia del anterior no permite el envío de archivos adjuntos.
 
 Pruebas:
 --------

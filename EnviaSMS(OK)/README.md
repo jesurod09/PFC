@@ -9,10 +9,11 @@ Se ha utilizado para ello un plugin de terceros por ser más completo, si bien e
 
 Plugin utilizado:
 -----------------
+El plugin utilizado se conoce como Cordova SMS Plugin 0.1.6
 
 * Repositorio: https://github.com/cordova-sms/cordova-sms-plugin
 * Ejemplo: Descargado del mismo enlace
-* Particularidades: El plugin es válido para Android, iOS y Windows Phone 8. En el caso de iOS no es posible el envío de SMS sin utilizar la app nativa.
+* Particularidades: El plugin es válido para Android, iOS y Windows Phone 8. En el caso de iOS no es posible el envío de SMS sin utilizar la app nativa, es decir la app no puede enviar SMS automáticamente.
 
 Pruebas realizadas:
 -------------------

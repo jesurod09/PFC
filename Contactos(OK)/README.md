@@ -13,7 +13,8 @@ Objetivo de la aplicación:
 --------------------------
 Esta aplicación forma parte del kit de aplicaciones que manejan el software nativo del teléfono. Se pretende demostrar que es posible acceder a la agenda de contactos y extraer e insertar información útil en ella.
 El ejemplo se ha extraído de la web: 
-http://qnimate.com/accessing-user-phone-contacts-using-intel-xdk/
+
+* http://qnimate.com/accessing-user-phone-contacts-using-intel-xdk/
 
 Observaciones:
 --------------
@@ -21,9 +22,10 @@ Se ha instalado fastclick para que la aplicación ejecute con más rapidez. Aún
 
 Plugins utilizados:
 -------------------
-Ha sido necesario instalar el plugin propio de Intel XDK de Contactos, simplemente marcando la casilla correspondiente en el Intel XDK.
+Ha sido necesario instalar el plugin propio de Intel XDK de Contactos (Intel XDK Contacts 1.1.14), simplemente marcando la casilla correspondiente en Intel XDK.
 La información relativa a cómo debe utilizarse puede encontrarse en la siguiente url:
-    - https://github.com/01org/cordova-plugin-intel-xdk-contacts
+
+* https://github.com/01org/cordova-plugin-intel-xdk-contacts
     
     
     * El método addContact():

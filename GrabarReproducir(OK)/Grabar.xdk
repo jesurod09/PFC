@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "https://appcenter.html5tools-software.intel.com/api/v2.0/redirect/projectrenderers/release-2015-ww25/jsapp/templates-blank-cordova-project/sample.zip",
       "projectGuid": "08b1870d-8ce0-4bf8-93d1-e6d7536c0498",
-      "lastModifiedDate": 1444145189800,
+      "lastModifiedDate": 1445270971371,
       "creationDate": 1435683573994
     },
     "XDK-app-designer": "false",
@@ -92,7 +92,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "GrabarReproducir",
         "appID_": "xdk.intel.blank.template.crosswalk",
         "appAccess_": {
           "mode": "legacy",
@@ -124,7 +124,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "GrabarReproducir",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": {
           "mode": "legacy",
@@ -155,7 +155,7 @@
           "ios-configuration": "adhoc"
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "GrabarReproducir",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": {
           "mode": "legacy",
@@ -185,7 +185,7 @@
           "windows-publisher-id": ""
         },
         "isActive_": true,
-        "appName_": "Grabar",
+        "appName_": "GrabarReproducir",
         "appID_": "xdk.intel.blank.template",
         "appAccess_": {
           "mode": "legacy",

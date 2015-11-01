@@ -8,12 +8,13 @@ La aplicación muestra por pantalla el nivel de la batería y si el dispositivo 
 
 Objetivo:
 ---------
-El objetivo principal de la aplicación es acceder a información importante de una pieza fundamental de Hardware de los teléfonos como es la batería. Utilizando el cordova-plugin-battery-status se puede obtener la  información que se ha mencionado en la descripción. 
+El objetivo principal de la aplicación es acceder a información importante de una pieza fundamental de Hardware de los teléfonos como es la batería. Utilizando el plugin Battery 0.2.12 se puede obtener la información que se ha mencionado en la descripción. 
 
 Plugin utilizado:
 -----------------
 El plugin utilizado puede encontrarse en la siguiente URL:
-    - https://github.com/apache/cordova-plugin-battery-status
+
+* https://github.com/apache/cordova-plugin-battery-status
 
 Compatibilidad:
 ---------------
@@ -56,8 +57,8 @@ Pruebas:
     - BQ Aquaris 5HD
     - LG L50 Sporty
 
-* Se ha probado la aplicación sobre App Preview en iOS 9 sobre un terminal iPhone 4s. A pesar de incluir un plugin que es posible probar con App Preview, la aplicación no devuelve información sobre el estado de la batería. No se ha encontrado motivo aparente ya que no existen restricciones en iOS que apliquen al plugin con el que se ha desarrollado la aplicación.
+* Se ha probado la aplicación sobre App Preview en iOS 9 sobre un terminal iPhone 4s. A pesar de incluir un plugin que es posible probar con App Preview, la aplicación no devuelve información sobre el estado de la batería. No se ha encontrado motivo aparente ya que no existen restricciones en iOS que apliquen al plugin con el que se ha desarrollado la aplicación y en principio se trata de un plugin compatible con App Preview ya que viene incluido en Intel XDK.
 
-* La aplicación se ha probado en Android 4.4.2 empaquetada e instalada como aplicación nativa para los terminales:
+* La aplicación se ha probado con éxito en Android 4.4.2 empaquetada e instalada como aplicación nativa para los terminales:
     - BQ Aquaris 5HD
     - LG L50 Sporty

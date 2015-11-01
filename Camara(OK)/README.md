@@ -12,7 +12,8 @@ El objetivo de esta aplicacion es la captura de imágenes haciendo uso de la cá
 Plugin utilizado:
 -----------------
 El plugin que se ha utilizado es el plugin "Camera" incluído en Intel XDK en su versión 1.2.0. Este plugin también podría haberse incluído en la aplicación como si de un plugin de terceros se tratase extrayendo la información (ID y repositorio) de esta URL:
-    https://github.com/apache/cordova-plugin-camera
+
+* https://github.com/apache/cordova-plugin-camera
 
 Este plugin provee una API para tomar fotos y recupera la foto de la galería de imágenes del dispositivo.
 Para poder utilizar este plugin es importante comprobar que el dispositivo está listo para usarse usando la función onDeviceReady.

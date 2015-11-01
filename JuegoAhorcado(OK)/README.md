@@ -7,7 +7,7 @@ Esta aplicación implementa el conocido juego del ahorcado. El jugador tendrá q
 
 Objetivo:
 ---------
-El objetivo de esta aplicación es comprobar el renderizado de una aplicación que utiliza un canvas para pintar sobre la Web View de diferentes terminales.
+El objetivo de esta aplicación es comprobar el renderizado de una aplicación que utiliza un canvas para pintar dinámicamente sobre la Web View de diferentes terminales.
 
 Plugins utilizados:
 -------------------

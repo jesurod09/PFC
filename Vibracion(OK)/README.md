@@ -16,8 +16,12 @@ El objetivo es acceder al hardware que permite la vibración en los teléfonos m
 
 Plugin utilizado:
 -----------------
-Intel XDK contiene una casilla en Included Plugins que permite añadir este plugin. No obstante como esta aplicación también se utilizó para comprobar como se añadía plugins de terceros en Intel XDK, el plugin se ha cargado como tal, usando los datos proporcionados (ID y repositorio) en esta URL:
-	- http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+Intel XDK contiene una casilla en Included Plugins que permite añadir este plugin (Vibration 0.3.12). 
+Esta aplicación se utilizó para comprobar como se añadían plugins de terceros en Intel XDK, por lo que el plugin se ha cargó inicialmente, usando los datos proporcionados (ID y repositorio) en esta URL:
+
+* http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+
+Aunque para asegurar su uso en Android finalmente se incorporó al proyecto marcando la casilla correspondiente en Intel XDK.
 
 Dispositivos compatibles:
 -------------------------
@@ -46,3 +50,5 @@ Pruebas:
 * La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en Android 4.4.2 sobre los terminales:
     - BQ Aquaris 5 HD
     - LG L50 Sporty
+
+ En Android existe la limitación de que como máximo el teléfono podrá vibrar 15 segundos seguidos

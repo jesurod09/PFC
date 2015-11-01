@@ -4,7 +4,7 @@ Geolocalización APP
 
 Descripción:
 ------------
-La aplicación muestra por defecto inicialmente un punto localizado en las islas baleares. Una vez que obtiene la ubicación, se carga en el mapa el lugar en el que se encuentra el dispositivo móvil.
+La aplicación muestra por defecto inicialmente un punto localizado en un lugar fijo situado en medio del mar. Una vez que obtiene la ubicación, se carga en el mapa el lugar en el que se encuentra el dispositivo móvil.
 
 Objetivo:
 ---------
@@ -28,7 +28,7 @@ El plugin es válido en las siguientes plataformas:
     
 Pruebas realizadas:
 -------------------
-* La ejecución de la aplicación ha sido exitosa en el emulador de Intel XDK.
+* La ejecución de la aplicación ha sido exitosa en el emulador de Intel XDK aunque el mapa no se centra en la posición del marcador.
 
 * La aplicación ha sido probada con éxito como aplicación nativa en los dispositivos reales Android 4.4.2 , modelos de dispositivo:
     - BQ Aquaris 5 HD.
@@ -38,8 +38,9 @@ Pruebas realizadas:
     - BQ Aquaris 5 HD. ->Tarda en encontrar la posición.
     - LG L50 Sporty
     - iPhone 4s
-    
+
+En el caso de las pruebas realizadas sobre los dispositivos Android, bien haya sido instalando la aplicación como aplicación nativa o sobre App Preview, se ha observado que el dispositivo LG ha encontrado su ubicación más rápido que el BQ.  
 
 #Precauciones:
-En el caso de Android hay que activar el modo de alta precisión (enableHighAccuracy) para que la aplicación devueleva la posición del usuario.
+En el caso de Android hay que activar el modo de alta precisión (enableHighAccuracy) para que la aplicación devuelva la posición del usuario. Este modo de funcionamiento se sirve del GPS para encontrar la posición.
 

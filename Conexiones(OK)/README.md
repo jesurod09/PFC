@@ -23,11 +23,11 @@ El objetivo de esta aplicación es obtener información con el estado de la cone
 Plugin Utilizado:
 -----------------
 Se ha utilizado el plugin Connection incluído en Intel XDK, aunque también puede encontrarse en este repositorio de donde además se ha extraído el ejemplo:
-    - https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
+* https://github.com/apache/cordova-plugin-network-information/blob/master/README.md
 
 Compatibilidad:
 ---------------
-El plugin es compatible en los siguientes Sistemas Operativos:
+El plugin (Network Information 0.2.14) es compatible en los siguientes Sistemas Operativos:
 
 * Amazon Fire OS
 * Android
@@ -39,7 +39,7 @@ El plugin es compatible en los siguientes Sistemas Operativos:
 * Windows
 * Firefox OS
 
-En el caso de iOS y Windows Phone no se puede obtener la información sobre el tipo de red a la que está conectada el dispositivo y la conexión aparece por defecto siempre como CELL. En iOS el evento "online" tardará al menos un segundo en dispararse, antes de lo cual el tipo de conexión es UNKNOWN. También en iOS el evento "offline" tardará al menos un segundo en dispararse si procede cuando arranque la aplicación.
+El autor del plugin afirma que en el caso de iOS y Windows Phone no se puede obtener la información sobre el tipo de red a la que está conectada el dispositivo y la conexión aparece por defecto siempre como CELL. En iOS el evento "online" tardará al menos un segundo en dispararse, antes de lo cual el tipo de conexión es UNKNOWN. También en iOS el evento "offline" tardará al menos un segundo en dispararse si procede cuando arranque la aplicación.
 
 Pruebas:
 -------
@@ -47,4 +47,4 @@ Pruebas:
 
 * La aplicación se ha probado con éxito en Android 4.4.2 tanto sobre App Preview como instalándola como aplicación nativa para los dispositivos bq Aquaris 5HD y LG L50 Sporty.
 
-* La aplicación también se ha probado sobre iOS 9 en un iPhone 4s mediante App Preview. Al contrario de lo que afirmaba el autor del plugin en la documentación del mismo, el teléfono sí que ha sido capaz de determinar a qué tipo de red está conectado.
+* La aplicación también se ha probado sobre iOS 9 en un iPhone 4s mediante App Preview. Al contrario de lo que afirmaba el autor del plugin en la documentación del mismo, el teléfono sí que ha sido capaz de determinar a qué tipo de red está conectado, es decir no ha mostrado la conexión genérica CELL.

@@ -12,22 +12,22 @@ El objetivo que persigue la aplicación es demostrar que se puede acceder al blu
 
 Plugin utilizado:
 -----------------
-El plugin que se ha utilizado puede encontrarse en la siguiente url:
-    - https://github.com/don/BluetoothSerial#setdevicediscoveredlistener
+El plugin que se ha utilizado (Bluetooth Serial 0.4.0) puede encontrarse en la siguiente url:
+    
+	- https://github.com/don/BluetoothSerial#setdevicediscoveredlistener
     
 Su uso es compatible en:
-
-    * Android
-    * iOS
-    * Windows Phone 8
+ * Android
+ * iOS
+ * Windows Phone 8
     
 Tiene limitaciones importantes, como que no permite conectar dos dispositivos Android o iOS entre sí.
 
 Pruebas realizadas:
 -------------------
 La aplicación se ha probado con éxito sobre Android 4.4.2 como una aplicación nativa empaquetada e instalada para los modelos de dispositivo:
-	- BQ Aquaris 5 HD.
-	- LG L50 Sporty.
+* BQ Aquaris 5 HD.
+* LG L50 Sporty.
 Para ambos terminales se ha logrado escanear una lista de dispositivos con el bluetooth encendido y establecer un enlace con éxito con un MacBook PRO Retina 13" y con un iPhone 4s.
 
 Nota importante:

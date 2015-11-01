@@ -13,7 +13,8 @@ El objetivo principal de esta aplicación es introducir el uso del sistema de fi
 
 Repositorio utilizado:
 ----------------------
-Se ha utiliado el Plugin "FILE" incluído en Intel XDK y que también puede encontrarse en esta url: http://cordova.apache.org/docs/en/3.3.0/cordova_file_file.md.html#FileEntry
+Se ha utiliado el Plugin "File 1.3.2" incluído en Intel XDK y que también puede encontrarse en esta url: 
+* http://cordova.apache.org/docs/en/3.3.0/cordova_file_file.md.html#FileEntry
 
 Plataformas en las que debería funcionar la aplicación:
 -------------------------------------------------------

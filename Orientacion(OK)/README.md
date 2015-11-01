@@ -13,8 +13,7 @@ El objetivo de esta aplicación es probar hardware del dispositivo móvil, en co
 
 Plugin utilizado:
 -----------------
-Se ha utilizado el plugin Compass incluído en Intel XDK
-
+Se ha utilizado el plugin Compass (Device Orientation 0.3.10) incluído en Intel XDK.
 
 
 Pruebas:

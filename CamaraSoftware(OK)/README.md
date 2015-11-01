@@ -5,20 +5,23 @@ CamaraSoftware APP
 Descripción de la aplicación:
 -----------------------------
 La aplicación incorpora 4 botones:
-	 - "Captura Foto" -> Toma una foto normalmente
-	 - "Captura Foto Editable" ->Toma una foto y permite configurar algunas de sus características rellenando el formulario asociado.
-	 - "Desde Libreria de Fotos" ->Toma una foto desde la librería de fotos
-	 - "Desde Álbum de Fotos" -> Toma una foto desde el álbum de fotos
+
+* "Captura Foto" -> Toma una foto normalmente.
+* "Captura Foto Editable" ->Toma una foto y permite configurar algunas de sus características rellenando el formulario asociado.
+* "Desde Libreria de Fotos" ->Toma una foto desde la librería de fotos.
+* "Desde Álbum de Fotos" -> Toma una foto desde el álbum de fotos.
+
 Debajo de los cuatro botones hay dos etiquetas <image>. La etiqueta superior coloca la imagen tomada desde los dos primeros botones mientras que las segunda coloca la imagen tmada por c ualquiera de las otras dos opciones.
 
 Objetivo:
 ---------
-El objetivo es demostrar que es posible configurar determinados aspectos multimedia. En este caso se ha seleccionado la cámara y la captura de imágenes.
+El objetivo es demostrar que es posible configurar determinados aspectos multimedia. Para ilustrar el ejemplo  se ha seleccionado la cámara y la captura de imágenes pero también es posible configurar aspectos de sonido, como el volumen de las reproducciones por ejemplo.
 
 Plugin utilizado:
 -----------------
 El plugin que se ha utilizado es el plugin "Camera" incluído en Intel XDK en su versión 1.2.0. Este plugin también podría haberse incluído en la aplicación como si de un plugin de terceros se tratase extrayendo la información (ID y repositorio) de esta URL:
-    https://github.com/apache/cordova-plugin-camera
+
+* https://github.com/apache/cordova-plugin-camera
 
 Este plugin provee una API para tomar fotos  y configurarlas.
 Para poder utilizar este plugin es importante comprobar que el dispositivo está listo para usarse usando la función onDeviceReady.
@@ -38,7 +41,8 @@ Pruebas realizadas:
 * La aplicación se ha probado con éxito empaquetándola e instalándola como aplicación nativa en  Android 4.4.2 sobre los terminales:
   - BQ Aquaris 5HD.
   - LG L50 Sporty.
- Se produce error al configurar la imagen con codificación PNG
+ 
+* NOTA: En Android se produce error al configurar la imagen con codificación PNG
  
 
 Nota importante:
