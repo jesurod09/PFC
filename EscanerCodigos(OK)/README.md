@@ -17,7 +17,8 @@ Para desarrollar esta aplicación, se hace  uso del plugin Device incluído en l
 El plugin es compatible en iOS y Android y la función scanBarcode utilizada también.
 
 El plugin se ha descubierto gracias al tutorial que se puede encontrar en esta web:
-    - http://qnimate.com/create-a-barcode-scanner-application-using-intel-xdk-and-php/
+
+* http://qnimate.com/create-a-barcode-scanner-application-using-intel-xdk-and-php/
 
 
 Pruebas realizadas:
